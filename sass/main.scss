@@ -1,0 +1,10 @@
+@import "definitions";
+@import "components/landingPageMobile";
+@import "components/landingPageDesktop";
+@import "components/footer";
+@import "components/circles";
+@import "components/navigationBar";
+
+.hidden {
+	visibility: hidden;
+}

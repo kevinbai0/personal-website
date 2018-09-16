@@ -1,0 +1,610 @@
+.landing-page .main-landing-section {
+  width: 100vw;
+  height: 150vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background: linear-gradient(rgba(85, 63, 26, 0.4), rgba(85, 63, 26, 0.4)), url("/assets/meMobile.jpg") no-repeat;
+  background-position: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+.landing-page .main-landing-section .title {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: white;
+  font-size: 15vw;
+  align-self: end;
+  margin: 0;
+}
+.landing-page .main-landing-section .subtitle {
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: white;
+  font-size: 7vw;
+  align-self: start;
+  margin: 0;
+}
+.landing-page .hovering-tagline-landing-section {
+  position: absolute;
+  top: 135vw;
+  height: 30vw;
+  left: 10vw;
+  width: 80vw;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Rectangle: */
+  box-shadow: 0 2px 50px 15px rgba(0, 0, 0, 0.5);
+}
+.landing-page .hovering-tagline-landing-section p {
+  line-height: 1.5;
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: white;
+  font-size: 8vw;
+  font-weight: 300;
+  font-size: 6vw;
+  text-align: center;
+  width: 90%;
+  margin: 0 4vw;
+}
+.landing-page .about-landing-section {
+  background-color: #77ECAD;
+  padding: 20vw 5vw;
+}
+.landing-page .about-landing-section p {
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: #333333;
+  font-size: 8vw;
+}
+.landing-page .about-landing-section p span {
+  font-weight: 700;
+}
+.landing-page .featured-landing-section {
+  background-color: white;
+  padding: 4vw 0 10vw;
+  margin: 0;
+}
+.landing-page .featured-landing-section .title {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #333333;
+  font-size: 15vw;
+  margin: 10vw 5vw 2vw;
+}
+.landing-page .featured-landing-section .featured-work-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  margin: 0 5vw;
+}
+.landing-page .featured-landing-section .see-all-work-button {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #16C667;
+  font-size: 8vw;
+  text-align: right;
+  margin: 5vw 10px 0 0;
+}
+.landing-page .featured-landing-section .see-all-work-button span {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.landing-page .featured-landing-section .see-all-work-button span:hover {
+  color: #77ECAD;
+}
+.landing-page .fullstack-landing-section {
+  position: relative;
+}
+.landing-page .fullstack-landing-section .title {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #333333;
+  font-size: 15vw;
+  margin: 10vw 5vw 2vw;
+}
+.landing-page .fullstack-landing-section .triangle {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 15vw solid #77ECAD;
+  border-left: 100vw solid transparent;
+}
+.landing-page .testimonials-landing-section {
+  background-color: #77ECAD;
+  padding: 0 0 10vw;
+}
+.landing-page .testimonials-landing-section .title {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #333333;
+  font-size: 15vw;
+  margin: 0 5vw 5vw;
+  text-align: center;
+  padding: 10vw 0 0;
+}
+.landing-page .testimonials-landing-section .testimonial-item {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr;
+  margin: 2vw 8vw;
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: #333333;
+  font-size: 8vw;
+  align-items: center;
+}
+.landing-page .testimonials-landing-section .testimonial-item img {
+  justify-self: center;
+  width: 50%;
+  border-radius: 100%;
+  margin-bottom: 10vw;
+}
+.landing-page .testimonials-landing-section .testimonial-item .quote {
+  text-align: right;
+  font-weight: 300;
+}
+.landing-page .testimonials-landing-section .testimonial-item .speaker {
+  justify-self: end;
+  text-align: right;
+}
+.landing-page .testimonials-landing-section .dots-view {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+  padding: 5vw 15vw 0;
+}
+.landing-page .testimonials-landing-section .dots-view .dot {
+  cursor: pointer;
+  width: 7.5vw;
+  height: 7.5vw;
+  background-color: #333333;
+  border-radius: 5vw;
+}
+.landing-page .testimonials-landing-section .dots-view .dot.selected {
+  background-color: white;
+}
+.landing-page .contact-landing-section {
+  padding-bottom: 10vw;
+  text-align: center;
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: #333333;
+  font-size: 8vw;
+}
+.landing-page .contact-landing-section .title {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #333333;
+  font-size: 15vw;
+  margin: 10vw 0;
+  text-align: center;
+}
+.landing-page .contact-landing-section .my-email {
+  margin-top: 15vw;
+}
+.landing-page .contact-landing-section .my-number {
+  margin-top: 2vw;
+}
+.landing-page .contact-landing-section .my-location {
+  font-weight: 300;
+  margin-top: 10vw;
+}
+
+.featured-work-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.featured-work-item .featured-image-container {
+  border-radius: 1vw;
+  height: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featured-work-item .featured-image-container img {
+  height: 40vw;
+}
+.featured-work-item .info {
+  align-self: center;
+  text-align: center;
+}
+.featured-work-item .info .title {
+  margin: 4vw 0 0;
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 8vw;
+}
+.featured-work-item .info .description {
+  font-family: "Tajawal";
+  font-weight: 300;
+  font-size: 5vw;
+  margin: 0 0 6vw;
+}
+
+.fullstack-items-container .fullstack-item {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 10fr;
+  margin: 5vw 0 0;
+}
+.fullstack-items-container .fullstack-item .bullet-number {
+  margin: 6vw 0 0 5vw;
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #333333;
+  font-size: 7vw;
+}
+.fullstack-items-container .fullstack-item .writing-container {
+  margin: 0 5vw;
+  padding: 2vw 4vw;
+  /* Rectangle 5 Copy: */
+  background: #FFFFFF;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 2vw;
+  text-align: center;
+}
+.fullstack-items-container .fullstack-item .writing-container .title {
+  margin: 4vw 0;
+  font-size: 7vw;
+  font-weight: 500;
+}
+.fullstack-items-container .fullstack-item .writing-container .content {
+  margin: 4vw 0;
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: #333333;
+  font-size: 5vw;
+}
+
+.enter-email-view {
+  /* Rectangle 6: */
+  background: #FFFFFF;
+  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20vw;
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.enter-email-view .email-input {
+  padding: 2vw 10%;
+  font-size: 8vw;
+  border: none;
+  width: 60%;
+  font-family: "Nunito Sans";
+  font-weight: 300;
+}
+.enter-email-view .email-input:focus {
+  outline: none;
+}
+.enter-email-view .send-button {
+  font-size: 5vw;
+  font-family: "Nunito Sans";
+  font-weight: 300;
+  padding: 4vw 0;
+  width: 40%;
+  text-align: center;
+  background-color: #77ECAD;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.enter-email-view .send-button:hover {
+  background-color: #16C667;
+}
+
+.enter-email-view:focus-within {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 960px) {
+  .landing-page .main-landing-section {
+    height: 100vh;
+    background: linear-gradient(rgba(85, 63, 26, 0.4), rgba(85, 63, 26, 0.4)), url("/assets/me.jpg");
+    background-position: right top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .landing-page .main-landing-section .title {
+    font-size: 6vw;
+  }
+  .landing-page .main-landing-section .subtitle {
+    font-size: 3vw;
+  }
+  .landing-page .hovering-tagline-landing-section {
+    top: 90vh;
+    height: 20vh;
+  }
+  .landing-page .hovering-tagline-landing-section p {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .landing-page .about-landing-section {
+    padding: 10vw 5vw;
+  }
+  .landing-page .about-landing-section p {
+    font-size: 3vw;
+  }
+  .landing-page .featured-landing-section {
+    padding: 4vw 0 5vw;
+  }
+  .landing-page .featured-landing-section .title {
+    margin: 5vw 5vw 2vw;
+    font-size: 5vw;
+  }
+  .landing-page .featured-landing-section .featured-work-container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10vw;
+    margin: 0 10vw;
+  }
+  .landing-page .featured-landing-section .see-all-work-button {
+    font-size: 4vw;
+    margin: 2vw 5vw 0 0;
+  }
+  .landing-page .fullstack-landing-section .title {
+    margin: 5vw 5vw 2vw;
+    font-size: 5vw;
+  }
+  .landing-page .fullstack-landing-section .triangle {
+    border-bottom: 10vw solid #77ECAD;
+  }
+  .landing-page .testimonials-landing-section .title {
+    margin: 0 5vw 2vw;
+    font-size: 5vw;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item {
+    font-size: 2vw;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item img {
+    margin: 2vw 0 2vw;
+    width: 20%;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item .quote {
+    padding-top: 2vw;
+    width: 50%;
+    justify-self: center;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item .speaker {
+    width: 50%;
+    justify-self: center;
+  }
+  .landing-page .testimonials-landing-section .dots-view {
+    width: 40vw;
+    padding: 0 0 0 30vw;
+  }
+  .landing-page .testimonials-landing-section .dots-view .dot {
+    width: 2vw;
+    height: 2vw;
+  }
+  .landing-page .contact-landing-section {
+    font-size: 3vw;
+  }
+  .landing-page .contact-landing-section .title {
+    margin: 5vw 5vw 2vw;
+    font-size: 5vw;
+  }
+  .landing-page .contact-landing-section .my-email {
+    margin-top: 5vw;
+  }
+  .landing-page .contact-landing-section .my-number {
+    margin-top: 2vw;
+  }
+  .landing-page .contact-landing-section .my-location {
+    margin-top: 2vw;
+  }
+
+  .featured-work-item {
+    width: auto;
+  }
+  .featured-work-item .featured-image-container {
+    border-radius: 3px;
+    height: 35vw;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-work-item .featured-image-container img {
+    height: 15vw;
+  }
+  .featured-work-item .info {
+    align-self: center;
+    text-align: center;
+  }
+  .featured-work-item .info .title {
+    margin: 2vw 0 0;
+    font-family: "Tajawal";
+    font-weight: 500;
+    font-size: 3vw;
+  }
+  .featured-work-item .info .description {
+    font-family: "Tajawal";
+    font-weight: 300;
+    font-size: 2vw;
+    margin: 0 0 5vw;
+  }
+
+  .fullstack-items-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    margin-left: 5vw;
+  }
+  .fullstack-items-container .fullstack-item {
+    grid-template-columns: 1fr 5fr;
+  }
+  .fullstack-items-container .fullstack-item .bullet-number {
+    margin: 2vw 2vw 0;
+    font-size: 3vw;
+  }
+  .fullstack-items-container .fullstack-item .writing-container {
+    border-radius: 1vw;
+    margin: 0;
+    padding: 0;
+  }
+  .fullstack-items-container .fullstack-item .writing-container .title {
+    margin: 2vw 2vw 0;
+    padding: 0;
+    font-size: 3vw;
+  }
+  .fullstack-items-container .fullstack-item .writing-container .content {
+    margin: 1vw;
+    padding: 0;
+    font-size: 2vw;
+  }
+
+  .enter-email-view {
+    width: 50%;
+    margin: 0 0 0 25%;
+  }
+  .enter-email-view .email-input {
+    font-size: 3vw;
+    padding: 1vw 10%;
+  }
+  .enter-email-view .send-button {
+    font-size: 3vw;
+    padding: 1vw 0;
+  }
+}
+footer {
+  background-color: #333333;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  font-family: "Tajawal";
+  padding: 5vw;
+}
+footer .nav-items {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  font-size: 8vw;
+}
+footer .nav-items div {
+  margin-top: 2vw;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+footer .nav-items div:hover {
+  opacity: 0.5;
+}
+footer .social-media-symbols {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  margin-bottom: 2vw;
+}
+footer .social-media-symbols a {
+  text-align: right;
+}
+footer .social-media-symbols a img {
+  width: 20%;
+  transition: all 0.5s ease;
+}
+footer .social-media-symbols a img:hover {
+  opacity: 0.5;
+}
+footer .email {
+  font-size: 6vw;
+  font-weight: 300;
+  align-self: end;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+@media only screen and (min-width: 960px) {
+  footer {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    padding: 5vw;
+  }
+  footer .nav-items {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-self: end;
+  }
+  footer .social-media-symbols {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: end;
+  }
+  footer .social-media-symbols a {
+    text-align: right;
+  }
+  footer .social-media-symbols a img {
+    width: 50%;
+  }
+  footer .email {
+    font-size: 3vw;
+    align-self: end;
+    justify-self: end;
+  }
+}
+#circles-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: 5vw 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  justify-content: space-evenly;
+  top: 0;
+}
+nav .nav-item {
+  color: white;
+  font-family: "Tajawal";
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+nav .nav-item a {
+  color: inherit;
+  text-decoration: inherit;
+}
+nav .nav-item:hover {
+  opacity: 0.5;
+}
+nav .nav-item.selected {
+  color: #77ECAD;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */
