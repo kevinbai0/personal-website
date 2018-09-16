@@ -81,7 +81,9 @@ class LandingPage extends Component {
 				dots: "hidden"
 			}
 		}
+	}
 
+	componentDidMount() {
 		let newClasses = this.state.classes;
 		for (var i = 0; i < this.state.featuredWork.length; i++) {
 			newClasses.featuredWorkItem.push("hidden");
@@ -90,12 +92,10 @@ class LandingPage extends Component {
 		this.setState({
 			classes: newClasses
 		})
-	}
-
-	componentDidMount() {
 		window.addEventListener("scroll", (e) => {
 			let newClasses = this.state.classes;
 			var change = false;
+			if (document.getElementById("tagline") == null) return;
 			const taglineRect = document.getElementById("tagline").getBoundingClientRect();
 			const tagline2Rect = document.getElementById("tagline2").getBoundingClientRect();
 			const tagline3Rect = document.getElementById("tagline3").getBoundingClientRect();
@@ -169,8 +169,8 @@ class LandingPage extends Component {
 					<p>I help you bring your project to life from the ground up.</p>
 				</div>
 				<div className="about-landing-section">
-					<p class={this.state.classes.tagline2} id="tagline2">From <span>design</span> to <span>development</span>, you’re completely covered.</p>
-					<p class={this.state.classes.tagline3} id="tagline3"> I specialize in <span>mobile apps</span> and <span>websites</span> .</p>
+					<p className={this.state.classes.tagline2} id="tagline2">From <span>design</span> to <span>development</span>, you’re completely covered.</p>
+					<p className={this.state.classes.tagline3} id="tagline3"> I specialize in <span>mobile apps</span> and <span>websites</span> .</p>
 				</div>
 				<div className="featured-landing-section">
 					<h1 className="title">Featured Work</h1>

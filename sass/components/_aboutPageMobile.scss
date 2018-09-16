@@ -1,0 +1,126 @@
+@import "../definitions";
+
+$coral: #E35650;
+$teal: $secondaryColor;
+$largeFontSize: 12vw;
+
+.colored-coral {
+	color: $coral;
+}
+.colored-teal {
+	color: $teal;
+}
+.colored-orange {
+	color: #C97845;
+}
+
+.colored-blue {
+	color: #4A90E2;
+}
+
+.about-page {
+	font-family: $mainFont;
+	color: #333;
+	.about-main-section {
+		height: 150vw;
+		width: 100vw;
+		background-color: $coral;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		justify-content: space-around;
+		color: white;
+		.title {
+			font-weight: 500;
+			font-size: $largeFontSize;
+			align-self: end;
+			width: 90%;
+			text-align: center;
+		}
+		.subtitle {
+			font-size: 6vw;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+
+	.about-programming-section {
+		padding: 5vw 5vw 10vw;
+		background-color: #333333;
+		color: white;
+		.programming-description {
+			font-size: 8vw;
+			padding-top: 5vw;
+			font-weight: 300;
+		}
+		.programming-description-large {
+			font-size: 15vw;
+			margin-top: 15vw;
+		}
+		.programming-things-container {
+			margin-top: 10vw;
+			display: flex;
+			flex-direction: column;
+			font-weight: 200;
+			font-size: 8vw;
+			div { margin-top: 5vw; }
+		}
+	}
+
+	.about-robotics-section{
+		background-color: $secondaryColor;
+		padding: 10vw 5vw;
+		.robotics-description {
+			font-size: 8vw;
+		}
+		.robotics-description-title {
+			font-size: 10vw;
+			font-weight: 600;
+			margin-top: 5vw;
+		}
+		.robotics-description-huge-title {
+			font-size: 15vw;
+			font-weight: 800;
+			margin-top: 10vw;
+		}
+	}
+	.about-sports-section {
+		padding: 10vw 5vw;
+		.sports-description {
+			font-size: 8vw;
+		}
+		.sports-description-bigger {
+			font-size: 12vw;
+			margin: 10vw 0;
+		}
+		.sports-description-small {
+			font-size: 6vw;
+			margin-top: 5vw;
+		}
+
+		.sports-description-huge {
+			font-size: 15vw;
+			font-weight: 800;
+			margin: 10vw 0 0;
+		}
+		.sports-description-medium {
+			font-size: 6vw;
+			font-weight: 600;
+		}
+		.indented {
+			margin-left: 5vw;
+		}
+	}
+
+	.about-connect-section {
+		background-color: #F8772A;
+		display: flex;
+		color: white;
+		font-size: 12vw;
+		font-weight: 200;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10vw 7vw 10vw 5vw;
+	}
+}

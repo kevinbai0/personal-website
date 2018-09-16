@@ -603,6 +603,217 @@ nav .nav-item.selected {
   color: #77ECAD;
 }
 
+.colored-coral {
+  color: #E35650;
+}
+
+.colored-teal {
+  color: #77ECAD;
+}
+
+.colored-orange {
+  color: #C97845;
+}
+
+.colored-blue {
+  color: #4A90E2;
+}
+
+.about-page {
+  font-family: "Tajawal";
+  color: #333;
+}
+.about-page .about-main-section {
+  height: 150vw;
+  width: 100vw;
+  background-color: #E35650;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.about-page .about-main-section .title {
+  font-weight: 500;
+  font-size: 12vw;
+  align-self: end;
+  width: 90%;
+  text-align: center;
+}
+.about-page .about-main-section .subtitle {
+  font-size: 6vw;
+  font-weight: 300;
+  text-align: center;
+}
+.about-page .about-programming-section {
+  padding: 5vw 5vw 10vw;
+  background-color: #333333;
+  color: white;
+}
+.about-page .about-programming-section .programming-description {
+  font-size: 8vw;
+  padding-top: 5vw;
+  font-weight: 300;
+}
+.about-page .about-programming-section .programming-description-large {
+  font-size: 15vw;
+  margin-top: 15vw;
+}
+.about-page .about-programming-section .programming-things-container {
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  font-size: 8vw;
+}
+.about-page .about-programming-section .programming-things-container div {
+  margin-top: 5vw;
+}
+.about-page .about-robotics-section {
+  background-color: #77ECAD;
+  padding: 10vw 5vw;
+}
+.about-page .about-robotics-section .robotics-description {
+  font-size: 8vw;
+}
+.about-page .about-robotics-section .robotics-description-title {
+  font-size: 10vw;
+  font-weight: 600;
+  margin-top: 5vw;
+}
+.about-page .about-robotics-section .robotics-description-huge-title {
+  font-size: 15vw;
+  font-weight: 800;
+  margin-top: 10vw;
+}
+.about-page .about-sports-section {
+  padding: 10vw 5vw;
+}
+.about-page .about-sports-section .sports-description {
+  font-size: 8vw;
+}
+.about-page .about-sports-section .sports-description-bigger {
+  font-size: 12vw;
+  margin: 10vw 0;
+}
+.about-page .about-sports-section .sports-description-small {
+  font-size: 6vw;
+  margin-top: 5vw;
+}
+.about-page .about-sports-section .sports-description-huge {
+  font-size: 15vw;
+  font-weight: 800;
+  margin: 10vw 0 0;
+}
+.about-page .about-sports-section .sports-description-medium {
+  font-size: 6vw;
+  font-weight: 600;
+}
+.about-page .about-sports-section .indented {
+  margin-left: 5vw;
+}
+.about-page .about-connect-section {
+  background-color: #F8772A;
+  display: flex;
+  color: white;
+  font-size: 12vw;
+  font-weight: 200;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vw 7vw 10vw 5vw;
+}
+
+@media only screen and (min-width: 960px) {
+  .about-page {
+    font-family: "Tajawal";
+    color: #333;
+  }
+  .about-page .about-main-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #E35650;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: space-around;
+    color: white;
+  }
+  .about-page .about-main-section .title {
+    font-size: 6vw;
+    align-self: end;
+    width: 90%;
+    text-align: center;
+  }
+  .about-page .about-main-section .subtitle {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .about-page .about-programming-section {
+    padding: 5vw 5vw 5vw;
+  }
+  .about-page .about-programming-section .programming-description {
+    font-size: 3vw;
+    padding-top: 2vw;
+  }
+  .about-page .about-programming-section .programming-description-large {
+    font-size: 6vw;
+    margin-top: 5vw;
+  }
+  .about-page .about-programming-section .programming-things-container {
+    margin-top: 0vw;
+    display: flex;
+    flex-direction: row;
+    font-size: 3vw;
+    justify-content: space-between;
+  }
+  .about-page .about-robotics-section {
+    padding: 5vw 5vw;
+  }
+  .about-page .about-robotics-section .robotics-description {
+    font-size: 3vw;
+  }
+  .about-page .about-robotics-section .robotics-description-title {
+    font-size: 4.5vw;
+    margin-top: 1vw;
+  }
+  .about-page .about-robotics-section .robotics-description-huge-title {
+    font-size: 8vw;
+    margin-top: 4vw;
+  }
+  .about-page .about-sports-section {
+    padding: 5vw 5vw;
+  }
+  .about-page .about-sports-section .sports-description {
+    font-size: 3vw;
+  }
+  .about-page .about-sports-section .sports-description-bigger {
+    font-size: 4vw;
+    margin: 3vw 0;
+  }
+  .about-page .about-sports-section .sports-description-small {
+    font-size: 2vw;
+    margin-top: 1vw;
+  }
+  .about-page .about-sports-section .sports-description-huge {
+    font-size: 5.5vw;
+    margin: 1vw 0 0;
+  }
+  .about-page .about-sports-section .sports-description-medium {
+    font-size: 2vw;
+  }
+  .about-page .about-sports-section .indented {
+    margin-left: 5vw;
+  }
+  .about-page .about-connect-section {
+    display: flex;
+    font-size: 6vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 16vw 5vw 5vw;
+  }
+}
 .hidden {
   visibility: hidden;
 }
