@@ -28,6 +28,9 @@ nav {
 	.nav-item.selected {
 		color: $secondaryColor;
 	}
+	.nav-item.selected.dark {
+		color: $tintColor;
+	}
 	.nav-item.dark {
 		color: $darkColor;
 	}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Footer from "./Footer";
+import Footer from "../subcomponents/Footer";
 import { Link } from "react-router-dom";
-import NavigationBar from "./NavigationBar";
 import "animate.css";
 
 class AboutPage extends Component {
@@ -30,21 +29,27 @@ class AboutPage extends Component {
 			sportsDescription7: "hidden",
 			sportsDescription8: "hidden",
 			sportsDescription9: "hidden",
-			sportsDescription10: "hidden",
+			sportsDescription10: "hidden"
 		}
 	}
 
 	componentDidMount() {
-		window.addEventListener("scroll", () => {
-			var change = false;
-			Object.keys(this.state).map((key) => 
-			{
-				if (key.includes("programmingThing")) {
-					this.animateTag(key, 0.25, "flipInX");
-				}
-				else this.animateTag(key, 0.25, "bounceInLeft");
-			});
-		})
+		window.addEventListener("scroll", this.scrollListener);
+	}
+
+	scrollListener = () => {
+		Object.keys(this.state).map((key) => 
+		{
+			if (key.includes("programmingThing")) {
+				this.animateTag(key, 0.25, "flipInX");
+			}
+			else this.animateTag(key, 0.25, "bounceInLeft");
+		});
+	}
+
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.scrollListener);
 	}
 
 	animateTag = (tag, scrollPercentage, animation) => {

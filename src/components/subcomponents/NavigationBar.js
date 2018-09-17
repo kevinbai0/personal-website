@@ -18,7 +18,7 @@ class NavigationBar extends Component {
 			{this.props.navItems.map((item, i) => {
 				var className = "nav-item";
 				if (i == this.props.selected) className += " selected";
-				else if (!lightBar) className += " dark";
+				if(!lightBar) className += " dark";
 				return <NavItem key={i} title={item.name} className={className} selected={this.props.selected == i} link={item.link}/>
 			})}
 		</nav>

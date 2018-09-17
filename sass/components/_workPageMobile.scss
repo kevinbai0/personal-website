@@ -1,0 +1,26 @@
+@import "../definitions";
+
+.work-page {
+	font-family: $mainFont;
+	.projects-title {
+		.title {
+			margin: 15vw auto 0;
+			text-align: center;
+			font-size: 8vw;
+			font-weight: 800;
+		}
+		.underlined {
+			background-color: $tintColor;
+			height: 4px;
+			width: 25%;
+			margin: 0 auto;
+			border-radius: 2px;
+		}
+	}
+	.featured-work-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+		margin: 5vw 5vw 0;
+	}
+}

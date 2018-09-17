@@ -1,19 +1,7 @@
 import React, {Component} from "react";
-import Footer from "./Footer";
+import Footer from "../subcomponents/Footer";
 import "animate.css";
-import NavigationBar from "./NavigationBar";
-
-const FeaturedWorkItem = (props) => {
-	return <div id={props.id} className={"featured-work-item " + props.classAddon}>
-		<div className="featured-image-container" style={props.style}>
-			<img className="featured-image" src={props.src}/>
-		</div>
-		<div className="info">
-			<div className="title">{props.title}</div>
-			<div className="description">{props.description}</div>
-		</div>	
-	</div>
-}
+import FeaturedWorkComponent from "../subcomponents/FeaturedWorkComponent";
 
 const FullstackItem = (props) => {
 	return <div id={props.id} className={"fullstack-item " + props.classAddon}>
@@ -93,8 +81,14 @@ class LandingPage extends Component {
 		this.setState({
 			classes: newClasses
 		})
-		window.addEventListener("scroll", (e) => {
-			let newClasses = this.state.classes;
+		window.addEventListener("scroll", this.scrollListener)
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.scrollListener);
+	}
+	scrollListener = () => {
+		let newClasses = this.state.classes;
 			var change = false;
 			if (document.getElementById("tagline") == null) return;
 			const taglineRect = document.getElementById("tagline").getBoundingClientRect();
@@ -133,7 +127,6 @@ class LandingPage extends Component {
 					classes: newClasses
 				})
 			}
-		})
 	}
 	updateTag = (newClasses, tag, scrollPosition, animation) => {
 		if (window.pageYOffset > scrollPosition) {
@@ -178,7 +171,7 @@ class LandingPage extends Component {
 					<h1 className="title">Featured Work</h1>
 					<div className="featured-work-container">
 						{this.state.featuredWork.map((workItem, i) => {
-							return <FeaturedWorkItem key={i} title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description} classAddon={this.state.classes.featuredWorkItem[i]} id={"featuredWorkItem" + i}/>
+							return <FeaturedWorkComponent key={i} title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description} classAddon={this.state.classes.featuredWorkItem[i]} id={"featuredWorkItem" + i}/>
 						})}
 					</div>
 					<div className="see-all-work-button"><span>See all work</span></div>

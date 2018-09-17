@@ -43,8 +43,8 @@ $titleFontSize: 4vw;
 				display: grid;
 				grid-auto-rows: auto;
 				grid-template-columns: 1fr 1fr;
-				grid-gap: 14vw;
-				margin: 0 8vw;
+				grid-gap: 6.67vw;
+				margin: 0 6.67vw;
 			}
 			.see-all-work-button {
 				font-size: 4vw;
@@ -132,8 +132,8 @@ $titleFontSize: 4vw;
 		width: auto;
 		.featured-image-container {
 			border-radius: 3px;
-			height: 35vw;
-			width: 35vw;
+			height: 30vw;
+			width: 40vw;
 			display: flex;
 			align-items: center;
 			justify-content: center;
