@@ -1,0 +1,24 @@
+@import "../../definitions";
+
+@media only screen and (min-width: 800px) {
+	.contact-page {
+		margin: 10vw 0 0;
+		.contact-section {
+			font-size: 3vw;
+			padding: 0 0 5vw 0;
+			.title {
+				margin: 5vw 5vw 0;
+				font-size: 5vw;
+			}
+			.my-email {
+				margin-top: 5vw;
+			}
+			.my-number {
+				margin-top: 2vw;
+			}
+			.my-location {
+				margin-top: 3vw;
+			}
+		}
+	}
+}

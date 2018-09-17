@@ -1,13 +1,19 @@
 @import "definitions";
-@import "components/landingPageMobile";
-@import "components/landingPageDesktop";
+@import "global";
+
+@import "mobile/pages/landingPageMobile";
+@import "mobile/pages/aboutPageMobile";
+@import "mobile/pages/workPageMobile";
+@import "mobile/pages/contactPageMobile";
+
+@import "desktop/pages/landingPageDesktop";
+@import "desktop/pages/aboutPageDesktop";
+@import "desktop/pages/workPageDesktop";
+@import "desktop/pages/contactPageDesktop";
+
 @import "components/footer";
-@import "components/circles";
 @import "components/navigationBar";
-@import "components/aboutPageMobile";
-@import "components/aboutPageDesktop";
-@import "components/workPageMobile";
-@import "components/workPageDesktop";
+@import "components/email";
 
 
 .hidden {

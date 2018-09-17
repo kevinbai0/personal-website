@@ -1,0 +1,20 @@
+@import "definitions";
+
+.underlined-title {
+	.title {
+		margin: 10vw auto 0;
+		text-align: center;
+		font-size: 5vw;
+		font-weight: 800;
+	}
+	.underlined {
+		background-color: $tintColor;
+		height: 4px;
+		width: 15%;
+		margin: 0 auto 2vw;
+		border-radius: 2px;
+	}
+	.width-20 {
+		width: 20%;
+	}
+}

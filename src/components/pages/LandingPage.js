@@ -2,9 +2,12 @@ import React, {Component} from "react";
 import Footer from "../subcomponents/Footer";
 import "animate.css";
 import FeaturedWorkComponent from "../subcomponents/FeaturedWorkComponent";
+import EmailComponent from "../subcomponents/EmailComponent";
+import AnimateScrollDiv from "../subcomponents/AnimateScrollDiv";
+import { Link } from "react-router-dom";
 
 const FullstackItem = (props) => {
-	return <div id={props.id} className={"fullstack-item " + props.classAddon}>
+	return <div id={props.id} className={"fullstack-item"}>
 		<div className="bullet-number">{props.order}.</div>
 		<div className="writing-container">
 			<div className="title">{props.title}</div>
@@ -18,15 +21,6 @@ const TestimonialItem = (props) => {
 		<img src={props.src} />
 		<div className="quote">{props.quote}</div>
 		<div className="speaker">- {props.speaker}</div>
-	</div>
-}
-
-const EmailComponent = (props) => {
-	return <div className="enter-email-view">
-		<input type="text" className="email-input" placeholder="Email"/>
-		<div className="send-button">
-			Send
-		</div>
 	</div>
 }
 
@@ -60,27 +54,15 @@ class LandingPage extends Component {
 				{ src: "/assets/meCropped.jpg", quote: "\"5. Written testimonials from customers. Cool stuff, I know get some good stuff written about me to put on here and that would be great!\"", speaker: "Kevin Bai" },
 			],
 			currentTestimonialNumber: 0,
-			classes: {
-				tagline: "hidden",
-				tagline2: "hidden",
-				tagline3: "hidden",
-				featuredWorkItem: [],
-				fullstackItems: [],
-				testimonial: "hidden",
-				dots: "hidden"
-			}
+			offsetY: 0
 		}
 	}
 
+	componentWillMount() {
+		window.scrollTo(0,0);
+	}
+
 	componentDidMount() {
-		let newClasses = this.state.classes;
-		for (var i = 0; i < this.state.featuredWork.length; i++) {
-			newClasses.featuredWorkItem.push("hidden");
-		}
-		this.state.fullstackItems.forEach(() => newClasses.fullstackItems.push("hidden"));
-		this.setState({
-			classes: newClasses
-		})
 		window.addEventListener("scroll", this.scrollListener)
 	}
 
@@ -88,45 +70,9 @@ class LandingPage extends Component {
 		window.removeEventListener("scroll", this.scrollListener);
 	}
 	scrollListener = () => {
-		let newClasses = this.state.classes;
-			var change = false;
-			if (document.getElementById("tagline") == null) return;
-			const taglineRect = document.getElementById("tagline").getBoundingClientRect();
-			const tagline2Rect = document.getElementById("tagline2").getBoundingClientRect();
-			const tagline3Rect = document.getElementById("tagline3").getBoundingClientRect();
-			const testimonialRect = document.getElementById("testimonialItem").getBoundingClientRect();
-			const dotsRect = document.getElementById("dots").getBoundingClientRect();
-
-			const taglineOffset = window.innerHeight - (taglineRect.y + window.pageYOffset);
-			const tagline2Offset = tagline2Rect.y + window.pageYOffset - window.innerHeight + window.innerHeight / 4;
-			const tagline3Offset = tagline3Rect.y + window.pageYOffset - window.innerHeight + window.innerHeight / 4;
-			const testomonialOffset = testimonialRect.y + window.pageYOffset - window.innerHeight + testimonialRect.height / 3;
-			const dotsOffset = dotsRect.y + window.pageYOffset - window.innerHeight + dotsRect.height / 3;
-
-
-			change = this.updateTag(newClasses, "tagline", taglineOffset, "bounceInLeft") ? true : change;
-			change = this.updateTag(newClasses, "tagline2", tagline2Offset, "bounceInLeft") ? true : change;
-			change = this.updateTag(newClasses, "tagline3", tagline3Offset, "bounceInLeft") ? true : change;
-			change = this.updateTag(newClasses, "testimonial", testomonialOffset, "slideInRight") ? true : change;
-			change = this.updateTag(newClasses, "dots", dotsOffset, "slideInLeft") ? true : change;
-
-
-			this.state.featuredWork.forEach((workItem, i) => {
-				let elem = document.getElementById("featuredWorkItem" + i).getBoundingClientRect();
-				let elemOffset = elem.y + window.pageYOffset - window.innerHeight + elem.height / 3;
-				change = this.updateSubTag(newClasses, "featuredWorkItem", i, elemOffset, i % 2 == 0 ? "zoomInLeft" : "zoomInRight") ? true : change;
-			})
-			this.state.fullstackItems.forEach((_, i) => {
-				let elem = document.getElementById("fullstackItem" + i).getBoundingClientRect();
-				let elemOffset = elem.y + window.pageYOffset - window.innerHeight + elem.height / 2;
-				change = this.updateSubTag(newClasses, "fullstackItems", i, elemOffset, i % 2 == 0 ? "rotateInUpLeft" : "rotateInUpRight") ? true : change;
-			})
-
-			if (change) {
-				this.setState({
-					classes: newClasses
-				})
-			}
+		this.setState({
+			pageYOffset: window.pageYOffset
+		})
 	}
 	updateTag = (newClasses, tag, scrollPosition, animation) => {
 		if (window.pageYOffset > scrollPosition) {
@@ -160,27 +106,31 @@ class LandingPage extends Component {
 					<h1 className="title bounceIn animated">Kevin Bai</h1>
 					<h2 className="subtitle bounceIn animated">Mobile and web developer</h2>
 				</div>
-				<div id="tagline" className={"hovering-tagline-landing-section " + this.state.classes.tagline}>
+				<AnimateScrollDiv id="tagline" className={"hovering-tagline-landing-section"} animation="bounceInLeft" scrollPercentage={0.25}>
 					<p>I help you bring your project to life from the ground up.</p>
-				</div>
+				</AnimateScrollDiv>
 				<div className="about-landing-section">
-					<p className={this.state.classes.tagline2} id="tagline2">From <span>design</span> to <span>development</span>, you’re completely covered.</p>
-					<p className={this.state.classes.tagline3} id="tagline3"> I specialize in <span>mobile apps</span> and <span>websites</span>.</p>
+					<AnimateScrollDiv id="tagline2" animation="bounceInLeft" scrollPercentage={0.25}>From <span>design</span> to <span>development</span>, you’re completely covered.</AnimateScrollDiv>
+					<AnimateScrollDiv id="tagline3" animation="bounceInLeft" scrollPercentage={0.25}> I specialize in <span>mobile apps</span> and <span>websites</span>.</AnimateScrollDiv>
 				</div>
 				<div className="featured-landing-section">
 					<h1 className="title">Featured Work</h1>
 					<div className="featured-work-container">
 						{this.state.featuredWork.map((workItem, i) => {
-							return <FeaturedWorkComponent key={i} title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description} classAddon={this.state.classes.featuredWorkItem[i]} id={"featuredWorkItem" + i}/>
+							return <AnimateScrollDiv key={i} id={"featuredWorkComponent" + i} animation={i % 2 == 0 ? "zoomInLeft" : "zoomInRight"} scrollPercentage={0.25}>
+								<FeaturedWorkComponent title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description}/>
+							</AnimateScrollDiv> 
 						})}
 					</div>
-					<div className="see-all-work-button"><span>See all work</span></div>
+					<div className="see-all-work-button"><span><Link to="/work">See all work</Link></span></div>
 				</div>
 				<div className="fullstack-landing-section">
 					<h1 className="title">Fullstack</h1>
 					<div className="fullstack-items-container">
 						{
-							this.state.fullstackItems.map((item, i) => <FullstackItem key={i} order={item.order} title={item.title} content={item.content} classAddon={this.state.classes.fullstackItems[i]} id={"fullstackItem" + i}/>)
+							this.state.fullstackItems.map((item, i) => <AnimateScrollDiv key={i} id={"fullstackItem" + i} scrollPercentage={0.25} animation={i % 2 == 0 ?"rotateInUpLeft" : "rotateInUpRight"}>
+									<FullstackItem order={item.order} title={item.title} content={item.content} />
+								</AnimateScrollDiv>)
 						}
 					</div>
 					<div className="triangle"></div>
@@ -189,15 +139,16 @@ class LandingPage extends Component {
 					<div className="title">Testimonials</div>
 					{
 						testimonialItem != null ?
-							<TestimonialItem
-								id="testimonialItem"
-								classAddon={this.state.classes.testimonial}
-								src={testimonialItem.src}
-								quote={testimonialItem.quote}
-								speaker={testimonialItem.speaker}
-							/> : ""
+							<AnimateScrollDiv id="testimonialItem" animation={"bounceInLeft"}>
+								<TestimonialItem
+									src={testimonialItem.src}
+									quote={testimonialItem.quote}
+									speaker={testimonialItem.speaker}
+								/>
+							</AnimateScrollDiv>
+							 : ""
 					}
-					<div className={"dots-view " + this.state.classes.dots} id="dots">
+					<AnimateScrollDiv className="dots-view" id="dots" animation={"bounceInRight"}>
 						{
 							this.state.testimonials.map((_, i) => {
 								return <div key={i} 
@@ -206,11 +157,13 @@ class LandingPage extends Component {
 								></div>
 							})
 						}
-					</div>
+					</AnimateScrollDiv>
 				</div>
 				<div className="contact-landing-section">
 					<div className="title">Get in touch</div>
-					<EmailComponent />
+					<AnimateScrollDiv id="email-animate-container" scrollPercentage={0.25} animation="flipInX">
+						<EmailComponent />
+					</AnimateScrollDiv>
 					<div className="my-email">me@kevinbai.design</div>
 					<div className="my-number">+1 (807) 633-4358</div>
 					<div className="my-location">Located in 

@@ -4,6 +4,7 @@ import LandingPage from './components/pages/LandingPage';
 import NavigationBar from './components/subcomponents/NavigationBar';
 import AboutPage from './components/pages/AboutPage';
 import WorkPage from './components/pages/WorkPage';
+import ContactPage from './components/pages/ContactPage';
 
 class App extends Component {
 	constructor(props) {
@@ -19,6 +20,7 @@ class App extends Component {
 					<Route exact path="/" render={() => <LandingPage navigationBar={this.getNavBar(0)}/>}/>
 					<Route path="/about" render={() => <AboutPage navigationBar={this.getNavBar(4)}/> }/>
 					<Route path="/work" render={() => <WorkPage navigationBar={this.getNavBar(1)} /> }/>
+					<Route path="/contact" render={() => <ContactPage navigationBar={this.getNavBar(3)} /> } />
 				</div>
 			</Router>
 		);

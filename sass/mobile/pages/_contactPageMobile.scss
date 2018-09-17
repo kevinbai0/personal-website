@@ -1,0 +1,25 @@
+@import "../../definitions";
+
+.contact-page {
+	margin: 20vw 0 0;
+	.contact-section {
+		padding-bottom: 15vw;
+		.title {
+			@include headerStyle(true, $darkColor);
+			margin: 10vw 0;
+			text-align: center;
+		}
+		text-align: center;
+		@include bodyStyle(true, $darkColor);
+		.my-email {
+			margin-top: 15vw;
+		}
+		.my-number {
+			margin-top: 2vw;
+		}
+		.my-location {
+			font-weight: 300;
+			margin-top: 10vw;
+		}
+	}
+}

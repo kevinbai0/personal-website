@@ -32,7 +32,9 @@ class AboutPage extends Component {
 			sportsDescription10: "hidden"
 		}
 	}
-
+	componentWillMount() {
+		window.scrollTo(0,0);
+	}
 	componentDidMount() {
 		window.addEventListener("scroll", this.scrollListener);
 	}

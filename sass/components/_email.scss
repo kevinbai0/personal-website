@@ -1,0 +1,55 @@
+
+.enter-email-view {
+	/* Rectangle 6: */
+	background: #FFFFFF;
+	box-shadow: 0 5px 18px 0 rgba(0,0,0,0.50);
+	border-radius: 20vw;
+	width: 90%;
+	display: flex;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	.email-input {
+		padding: 2vw 10%;
+		font-size: 8vw;
+		border: none;
+		width: 60%;
+		font-family: "Nunito Sans";
+		font-weight: 300;
+	}
+	.email-input:focus {
+		outline: none;
+	}
+	.send-button {
+		font-size: 5vw;
+		font-family: "Nunito Sans";
+		font-weight: 300;
+		padding: 4vw 0;
+		width: 40%;
+		text-align: center;
+		background-color: $secondaryColor;
+		cursor: pointer;
+		transition: all 0.5s ease;
+	}
+	.send-button:hover {
+		background-color: $tintColor;
+	}
+}
+
+.enter-email-view:focus-within {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.50);
+}
+
+@media only screen and (min-width: 800px) {
+	.enter-email-view {
+		width: 50%;
+		.email-input {
+			font-size: 3vw;
+			padding: 0.5vw 10%;
+		}
+		.send-button {
+			font-size: 3vw;
+			padding: 0.5vw 0;
+		}
+	}
+}
+

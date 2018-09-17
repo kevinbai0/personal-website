@@ -10,7 +10,7 @@ const NavItem = (props) => {
 class NavigationBar extends Component {
 	render() {
 		var lightBar = true;
-		if (this.props.selected > 0 && this.props.selected < 3) {
+		if (this.props.selected > 0 && this.props.selected < 4) {
 			lightBar = false;
 		}
 

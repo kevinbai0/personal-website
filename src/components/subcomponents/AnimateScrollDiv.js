@@ -16,18 +16,20 @@ class AnimateScrollDiv extends React.Component {
 		let elem = document.getElementById(this.props.id);
 		if (elem == null) return;
 		const tagRect = elem.getBoundingClientRect();
-		const tagOffset = tagRect.y + window.pageYOffset - window.innerHeight + window.innerHeight * this.props.scrollPercentage;
-		if (this.props.offset >= tagOffset && this.state.isHidden) {
+		let scrollPercentage = this.props.scrollPercentage == null ? 0.25 : this.props.scrollPercentage;
+		const tagOffset = tagRect.y + window.pageYOffset - window.innerHeight + window.innerHeight * scrollPercentage;
+
+		if (window.pageYOffset >= tagOffset && this.state.isHidden) {
 			this.setState({
 				isHidden: false
 			})
 		}
 	}
 	render() {
-		
+		let animation = this.props.animation == null ? "fadeIn" : this.props.animation;
 		return (
 			<div 
-				className={!this.state.isHidden ? this.props.className + " animated " + this.props.animation : this.props.className + " hidden"} 
+				className={!this.state.isHidden ? this.props.className + " animated " + animation : this.props.className + " hidden"} 
 				id={this.props.id}
 			>
 				{this.props.children}

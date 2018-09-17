@@ -2,7 +2,7 @@
 import React, {Component} from "react";
 
 const FeaturedWorkComponent = (props) => {
-	return <div id={props.id} className={"featured-work-item " + props.classAddon}>
+	return <div id={props.id} className={"featured-work-item"}>
 		<div className="featured-image-container" style={props.style}>
 			<img className="featured-image" src={props.src}/>
 		</div>

@@ -1,3 +1,20 @@
+.underlined-title .title {
+  margin: 10vw auto 0;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 800;
+}
+.underlined-title .underlined {
+  background-color: #16C667;
+  height: 4px;
+  width: 15%;
+  margin: 0 auto 2vw;
+  border-radius: 2px;
+}
+.underlined-title .width-20 {
+  width: 20%;
+}
+
 .landing-page .main-landing-section {
   width: 100vw;
   height: 150vw;
@@ -58,13 +75,14 @@
   background-color: #77ECAD;
   padding: 20vw 5vw;
 }
-.landing-page .about-landing-section p {
+.landing-page .about-landing-section div {
+  margin: 10vw 0;
   font-family: "Tajawal";
   font-weight: 400;
   color: #333333;
   font-size: 8vw;
 }
-.landing-page .about-landing-section p span {
+.landing-page .about-landing-section div span {
   font-weight: 700;
 }
 .landing-page .featured-landing-section {
@@ -96,6 +114,10 @@
 .landing-page .featured-landing-section .see-all-work-button span {
   cursor: pointer;
   transition: all 0.5s ease;
+}
+.landing-page .featured-landing-section .see-all-work-button span a {
+  text-decoration: inherit;
+  color: inherit;
 }
 .landing-page .featured-landing-section .see-all-work-button span:hover {
   color: #77ECAD;
@@ -188,6 +210,9 @@
   margin: 10vw 0;
   text-align: center;
 }
+.landing-page .contact-landing-section .enter-email-view {
+  margin: 0 5%;
+}
 .landing-page .contact-landing-section .my-email {
   margin-top: 15vw;
 }
@@ -266,375 +291,6 @@
   font-size: 5vw;
 }
 
-.enter-email-view {
-  /* Rectangle 6: */
-  background: #FFFFFF;
-  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 20vw;
-  width: 90%;
-  margin: 0 5%;
-  display: flex;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-.enter-email-view .email-input {
-  padding: 2vw 10%;
-  font-size: 8vw;
-  border: none;
-  width: 60%;
-  font-family: "Nunito Sans";
-  font-weight: 300;
-}
-.enter-email-view .email-input:focus {
-  outline: none;
-}
-.enter-email-view .send-button {
-  font-size: 5vw;
-  font-family: "Nunito Sans";
-  font-weight: 300;
-  padding: 4vw 0;
-  width: 40%;
-  text-align: center;
-  background-color: #77ECAD;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.enter-email-view .send-button:hover {
-  background-color: #16C667;
-}
-
-.enter-email-view:focus-within {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-}
-
-@media only screen and (min-width: 800px) {
-  .landing-page .main-landing-section {
-    height: 100vh;
-    background: radial-gradient(rgba(119, 119, 119, 0), rgba(85, 63, 26, 0.4)), url("/assets/me.jpg");
-    background-position: right top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .landing-page .main-landing-section .title {
-    font-size: 6vw;
-  }
-  .landing-page .main-landing-section .subtitle {
-    font-size: 3vw;
-  }
-  .landing-page .hovering-tagline-landing-section {
-    top: 90vh;
-    height: 20vh;
-  }
-  .landing-page .hovering-tagline-landing-section p {
-    font-size: 3vw;
-    text-align: center;
-  }
-  .landing-page .about-landing-section {
-    padding: 10vw 5vw 5vw;
-  }
-  .landing-page .about-landing-section p {
-    font-size: 3vw;
-  }
-  .landing-page .featured-landing-section {
-    padding: 0 0 2vw;
-  }
-  .landing-page .featured-landing-section .title {
-    margin: 5vw 5vw 2vw;
-    font-size: 4vw;
-  }
-  .landing-page .featured-landing-section .featured-work-container {
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 6.67vw;
-    margin: 0 6.67vw;
-  }
-  .landing-page .featured-landing-section .see-all-work-button {
-    font-size: 4vw;
-    margin: 0 5vw 0 0;
-  }
-  .landing-page .fullstack-landing-section .title {
-    margin: 2vw 5vw 0;
-    font-size: 4vw;
-  }
-  .landing-page .fullstack-landing-section .triangle {
-    border-bottom: 10vw solid #77ECAD;
-  }
-  .landing-page .testimonials-landing-section {
-    padding: 0 0 5vw 0;
-  }
-  .landing-page .testimonials-landing-section .title {
-    padding-top: 5vw;
-    margin: 0 5vw;
-    font-size: 4vw;
-  }
-  .landing-page .testimonials-landing-section .testimonial-item {
-    font-size: 2vw;
-    display: grid;
-    grid-template-rows: 5fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-  .landing-page .testimonials-landing-section .testimonial-item img {
-    grid-row: 1/3;
-    grid-column: 1/2;
-    margin: 0 0 1vw;
-    height: 100%;
-    width: auto;
-    justify-self: end;
-    margin: 0 5vw 0 0;
-  }
-  .landing-page .testimonials-landing-section .testimonial-item .quote {
-    padding-top: 2vw;
-    width: 75%;
-    justify-self: start;
-    text-align: left;
-    margin: 0 0 0 5vw;
-  }
-  .landing-page .testimonials-landing-section .testimonial-item .speaker {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    width: 50%;
-    justify-self: start;
-    align-self: end;
-    text-align: left;
-    margin: 0.5vw 0 0 5vw;
-  }
-  .landing-page .testimonials-landing-section .dots-view {
-    width: 40vw;
-    padding: 4vw 0 0 30vw;
-  }
-  .landing-page .testimonials-landing-section .dots-view .dot {
-    width: 2vw;
-    height: 2vw;
-  }
-  .landing-page .contact-landing-section {
-    font-size: 3vw;
-    padding: 0 0 5vw 0;
-  }
-  .landing-page .contact-landing-section .title {
-    margin: 5vw 5vw 2vw;
-    font-size: 4vw;
-  }
-  .landing-page .contact-landing-section .my-email {
-    margin-top: 5vw;
-  }
-  .landing-page .contact-landing-section .my-number {
-    margin-top: 2vw;
-  }
-  .landing-page .contact-landing-section .my-location {
-    margin-top: 3vw;
-  }
-
-  .featured-work-item {
-    width: auto;
-  }
-  .featured-work-item .featured-image-container {
-    border-radius: 3px;
-    height: 30vw;
-    width: 40vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .featured-work-item .featured-image-container img {
-    height: 15vw;
-  }
-  .featured-work-item .info {
-    align-self: center;
-    text-align: center;
-  }
-  .featured-work-item .info .title {
-    margin: 2vw 0 0;
-    font-family: "Tajawal";
-    font-weight: 500;
-    font-size: 3vw;
-  }
-  .featured-work-item .info .description {
-    font-family: "Tajawal";
-    font-weight: 300;
-    font-size: 2vw;
-    margin: 0 0 2vw;
-  }
-
-  .fullstack-items-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    width: 90vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .fullstack-items-container .fullstack-item {
-    grid-template-columns: 1fr 5fr;
-    margin: 2vw 0 0;
-  }
-  .fullstack-items-container .fullstack-item .bullet-number {
-    margin: 2vw 2vw 0;
-    font-size: 3vw;
-  }
-  .fullstack-items-container .fullstack-item .writing-container {
-    border-radius: 1vw;
-    margin: 0;
-    padding: 0;
-  }
-  .fullstack-items-container .fullstack-item .writing-container .title {
-    margin: 2vw 2vw 0;
-    padding: 0;
-    font-size: 3vw;
-  }
-  .fullstack-items-container .fullstack-item .writing-container .content {
-    margin: 1vw;
-    padding: 0;
-    font-size: 2vw;
-  }
-
-  .enter-email-view {
-    width: 50%;
-    margin: 0 0 0 25%;
-  }
-  .enter-email-view .email-input {
-    font-size: 3vw;
-    padding: 1vw 10%;
-  }
-  .enter-email-view .send-button {
-    font-size: 3vw;
-    padding: 1vw 0;
-  }
-}
-footer {
-  background-color: #333333;
-  display: grid;
-  grid-template-rows: 5fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  color: white;
-  font-family: "Tajawal";
-  padding: 5vw;
-}
-footer .nav-items {
-  grid-row: 1/3;
-  grid-column: 1/2;
-  font-size: 8vw;
-}
-footer .nav-items div {
-  margin-top: 2vw;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-footer .nav-items div a {
-  text-decoration: inherit;
-  color: inherit;
-}
-footer .nav-items div:hover {
-  opacity: 0.5;
-}
-footer .social-media-symbols {
-  justify-self: end;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 100%;
-  grid-row: 1/2;
-  grid-column: 2/3;
-  margin-bottom: 2vw;
-}
-footer .social-media-symbols a {
-  text-align: right;
-}
-footer .social-media-symbols a img {
-  width: 20%;
-  transition: all 0.5s ease;
-}
-footer .social-media-symbols a img:hover {
-  opacity: 0.5;
-}
-footer .email {
-  font-size: 6vw;
-  font-weight: 300;
-  align-self: end;
-  grid-row: 2/3;
-  grid-column: 2/3;
-}
-
-@media only screen and (min-width: 800px) {
-  footer {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 3fr 2fr;
-    padding: 2vw 5vw 4vw;
-  }
-  footer .nav-items {
-    grid-row: 2/3;
-    grid-column: 1/2;
-    font-size: 2vw;
-    display: flex;
-    justify-content: space-between;
-    align-self: end;
-  }
-  footer .social-media-symbols {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: end;
-    margin-bottom: 0;
-  }
-  footer .social-media-symbols a {
-    text-align: right;
-  }
-  footer .social-media-symbols a img {
-    width: 50%;
-  }
-  footer .email {
-    font-size: 2vw;
-    align-self: end;
-    justify-self: end;
-  }
-}
-#circles-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-nav {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  margin: 5vw 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  justify-content: space-evenly;
-  top: 0;
-}
-nav .nav-item {
-  color: white;
-  font-family: "Tajawal";
-  font-size: 1.5vw;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-nav .nav-item a {
-  color: inherit;
-  text-decoration: inherit;
-}
-nav .nav-item:hover {
-  opacity: 0.5;
-}
-nav .nav-item.selected {
-  color: #77ECAD;
-}
-nav .nav-item.selected.dark {
-  color: #16C667;
-}
-nav .nav-item.dark {
-  color: #333333;
-}
-
 .colored-coral {
   color: #E35650;
 }
@@ -644,7 +300,7 @@ nav .nav-item.dark {
 }
 
 .colored-orange {
-  color: #C97845;
+  color: #F6711C;
 }
 
 .colored-blue {
@@ -764,6 +420,245 @@ nav .nav-item.dark {
   padding: 10vw 7vw 10vw 5vw;
 }
 
+.work-page {
+  font-family: "Tajawal";
+}
+.work-page .projects-title .title {
+  margin: 15vw auto 0;
+  text-align: center;
+  font-size: 8vw;
+  font-weight: 800;
+}
+.work-page .projects-title .underlined {
+  background-color: #16C667;
+  height: 4px;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.work-page .featured-work-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  margin: 5vw 5vw 0;
+}
+
+.contact-page {
+  margin: 20vw 0 0;
+}
+.contact-page .contact-section {
+  padding-bottom: 15vw;
+  text-align: center;
+  font-family: "Tajawal";
+  font-weight: 400;
+  color: #333333;
+  font-size: 8vw;
+}
+.contact-page .contact-section .title {
+  font-family: "Tajawal";
+  font-weight: 700;
+  color: #333333;
+  font-size: 15vw;
+  margin: 10vw 0;
+  text-align: center;
+}
+.contact-page .contact-section .my-email {
+  margin-top: 15vw;
+}
+.contact-page .contact-section .my-number {
+  margin-top: 2vw;
+}
+.contact-page .contact-section .my-location {
+  font-weight: 300;
+  margin-top: 10vw;
+}
+
+@media only screen and (min-width: 800px) {
+  .landing-page .main-landing-section {
+    height: 100vh;
+    background: radial-gradient(rgba(119, 119, 119, 0), rgba(85, 63, 26, 0.4)), url("/assets/me.jpg");
+    background-position: right top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .landing-page .main-landing-section .title {
+    font-size: 6vw;
+  }
+  .landing-page .main-landing-section .subtitle {
+    font-size: 3vw;
+  }
+  .landing-page .hovering-tagline-landing-section {
+    top: 90vh;
+    height: 20vh;
+  }
+  .landing-page .hovering-tagline-landing-section p {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .landing-page .about-landing-section {
+    padding: 10vw 5vw 5vw;
+  }
+  .landing-page .about-landing-section div {
+    margin: 3vw 0;
+    font-size: 3vw;
+  }
+  .landing-page .featured-landing-section {
+    padding: 0 0 2vw;
+  }
+  .landing-page .featured-landing-section .title {
+    margin: 5vw 5vw 2vw;
+    font-size: 4vw;
+  }
+  .landing-page .featured-landing-section .featured-work-container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6.67vw;
+    margin: 0 6.67vw;
+  }
+  .landing-page .featured-landing-section .see-all-work-button {
+    font-size: 4vw;
+    margin: 0 5vw 0 0;
+  }
+  .landing-page .fullstack-landing-section .title {
+    margin: 2vw 5vw 0;
+    font-size: 4vw;
+  }
+  .landing-page .fullstack-landing-section .triangle {
+    border-bottom: 10vw solid #77ECAD;
+  }
+  .landing-page .testimonials-landing-section {
+    padding: 0 0 5vw 0;
+  }
+  .landing-page .testimonials-landing-section .title {
+    padding-top: 5vw;
+    margin: 0 5vw;
+    font-size: 4vw;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item {
+    font-size: 2vw;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item img {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    margin: 0 0 1vw;
+    height: 100%;
+    width: auto;
+    justify-self: end;
+    margin: 0 5vw 0 0;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item .quote {
+    padding-top: 2vw;
+    width: 75%;
+    justify-self: start;
+    text-align: left;
+    margin: 0 0 0 5vw;
+  }
+  .landing-page .testimonials-landing-section .testimonial-item .speaker {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 50%;
+    justify-self: start;
+    align-self: end;
+    text-align: left;
+    margin: 0.5vw 0 0 5vw;
+  }
+  .landing-page .testimonials-landing-section .dots-view {
+    width: 40vw;
+    padding: 4vw 0 0 30vw;
+  }
+  .landing-page .testimonials-landing-section .dots-view .dot {
+    width: 2vw;
+    height: 2vw;
+  }
+  .landing-page .contact-landing-section {
+    font-size: 3vw;
+    padding: 0 0 5vw 0;
+  }
+  .landing-page .contact-landing-section .title {
+    margin: 5vw 5vw 2vw;
+    font-size: 4vw;
+  }
+  .landing-page .contact-landing-section .enter-email-view {
+    margin: 0 25%;
+  }
+  .landing-page .contact-landing-section .my-email {
+    margin-top: 5vw;
+  }
+  .landing-page .contact-landing-section .my-number {
+    margin-top: 2vw;
+  }
+  .landing-page .contact-landing-section .my-location {
+    margin-top: 3vw;
+  }
+
+  .featured-work-item {
+    width: auto;
+  }
+  .featured-work-item .featured-image-container {
+    border-radius: 3px;
+    height: 30vw;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-work-item .featured-image-container img {
+    height: 15vw;
+  }
+  .featured-work-item .info {
+    align-self: center;
+    text-align: center;
+  }
+  .featured-work-item .info .title {
+    margin: 2vw 0 0;
+    font-family: "Tajawal";
+    font-weight: 500;
+    font-size: 3vw;
+  }
+  .featured-work-item .info .description {
+    font-family: "Tajawal";
+    font-weight: 300;
+    font-size: 2vw;
+    margin: 0 0 2vw;
+  }
+
+  .fullstack-items-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    margin: 0 5vw 0 5vw;
+  }
+  .fullstack-items-container .fullstack-item {
+    grid-template-columns: 1fr 5fr;
+    margin: 2vw 0 0;
+  }
+  .fullstack-items-container .fullstack-item .bullet-number {
+    margin: 2vw 2vw 0;
+    font-size: 3vw;
+  }
+  .fullstack-items-container .fullstack-item .writing-container {
+    border-radius: 1vw;
+    margin: 0;
+    padding: 0;
+  }
+  .fullstack-items-container .fullstack-item .writing-container .title {
+    margin: 2vw 2vw 0;
+    padding: 0;
+    font-size: 3vw;
+  }
+  .fullstack-items-container .fullstack-item .writing-container .content {
+    margin: 1vw;
+    padding: 0;
+    font-size: 2vw;
+  }
+}
 @media only screen and (min-width: 800px) {
   .about-page {
     font-family: "Tajawal";
@@ -855,49 +750,212 @@ nav .nav-item.dark {
     padding: 5vw 16vw 5vw 5vw;
   }
 }
-.work-page {
-  font-family: "Tajawal";
-}
-.work-page .projects-title .title {
-  margin: 15vw auto 0;
-  text-align: center;
-  font-size: 8vw;
-  font-weight: 800;
-}
-.work-page .projects-title .underlined {
-  background-color: #16C667;
-  height: 4px;
-  width: 25%;
-  margin: 0 auto;
-  border-radius: 2px;
-}
-.work-page .featured-work-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  margin: 5vw 5vw 0;
-}
-
 @media only screen and (min-width: 800px) {
-  .work-page .projects-title .title {
-    margin: 10vw auto 0;
-    text-align: center;
-    font-size: 5vw;
-    font-weight: 800;
-  }
-  .work-page .projects-title .underlined {
-    background-color: #16C667;
-    height: 4px;
-    width: 15%;
-    margin: 0 auto 2vw;
-    border-radius: 2px;
-  }
   .work-page .featured-work-container {
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: 1fr 1fr;
     grid-gap: 6.67vw;
     margin: 0 6.67vw;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .contact-page {
+    margin: 10vw 0 0;
+  }
+  .contact-page .contact-section {
+    font-size: 3vw;
+    padding: 0 0 5vw 0;
+  }
+  .contact-page .contact-section .title {
+    margin: 5vw 5vw 0;
+    font-size: 5vw;
+  }
+  .contact-page .contact-section .my-email {
+    margin-top: 5vw;
+  }
+  .contact-page .contact-section .my-number {
+    margin-top: 2vw;
+  }
+  .contact-page .contact-section .my-location {
+    margin-top: 3vw;
+  }
+}
+footer {
+  background-color: #333333;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  font-family: "Tajawal";
+  padding: 5vw;
+}
+footer .nav-items {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  font-size: 8vw;
+}
+footer .nav-items div {
+  margin-top: 2vw;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+footer .nav-items div a {
+  text-decoration: inherit;
+  color: inherit;
+}
+footer .nav-items div:hover {
+  opacity: 0.5;
+}
+footer .social-media-symbols {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  margin-bottom: 2vw;
+}
+footer .social-media-symbols a {
+  text-align: right;
+}
+footer .social-media-symbols a img {
+  width: 20%;
+  transition: all 0.5s ease;
+}
+footer .social-media-symbols a img:hover {
+  opacity: 0.5;
+}
+footer .email {
+  font-size: 6vw;
+  font-weight: 300;
+  align-self: end;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+@media only screen and (min-width: 800px) {
+  footer {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    padding: 2vw 5vw 4vw;
+  }
+  footer .nav-items {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-self: end;
+  }
+  footer .social-media-symbols {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: end;
+    margin-bottom: 0;
+  }
+  footer .social-media-symbols a {
+    text-align: right;
+  }
+  footer .social-media-symbols a img {
+    width: 50%;
+  }
+  footer .email {
+    font-size: 2vw;
+    align-self: end;
+    justify-self: end;
+  }
+}
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: 5vw 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  justify-content: space-evenly;
+  top: 0;
+}
+nav .nav-item {
+  color: white;
+  font-family: "Tajawal";
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+nav .nav-item a {
+  color: inherit;
+  text-decoration: inherit;
+}
+nav .nav-item:hover {
+  opacity: 0.5;
+}
+nav .nav-item.selected {
+  color: #77ECAD;
+}
+nav .nav-item.selected.dark {
+  color: #16C667;
+}
+nav .nav-item.dark {
+  color: #333333;
+}
+
+.enter-email-view {
+  /* Rectangle 6: */
+  background: #FFFFFF;
+  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20vw;
+  width: 90%;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.enter-email-view .email-input {
+  padding: 2vw 10%;
+  font-size: 8vw;
+  border: none;
+  width: 60%;
+  font-family: "Nunito Sans";
+  font-weight: 300;
+}
+.enter-email-view .email-input:focus {
+  outline: none;
+}
+.enter-email-view .send-button {
+  font-size: 5vw;
+  font-family: "Nunito Sans";
+  font-weight: 300;
+  padding: 4vw 0;
+  width: 40%;
+  text-align: center;
+  background-color: #77ECAD;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.enter-email-view .send-button:hover {
+  background-color: #16C667;
+}
+
+.enter-email-view:focus-within {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 800px) {
+  .enter-email-view {
+    width: 50%;
+  }
+  .enter-email-view .email-input {
+    font-size: 3vw;
+    padding: 0.5vw 10%;
+  }
+  .enter-email-view .send-button {
+    font-size: 3vw;
+    padding: 0.5vw 0;
   }
 }
 .hidden {

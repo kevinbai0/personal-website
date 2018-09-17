@@ -25,7 +25,9 @@ class WorkPage extends Component {
 			]
 		}
 	}
-
+	componentWillMount() {
+		window.scrollTo(0,0);
+	}
 	componentDidMount() {
 		window.addEventListener("scroll", this.scrollListener);
 	}
@@ -42,7 +44,7 @@ class WorkPage extends Component {
 	render() {
 		return <div className="work-page">
 			{this.props.navigationBar}
-			<div className="projects-title">
+			<div className="underlined-title">
 				<div className="title">Projects</div>
 				<div className="underlined"></div>
 			</div>
@@ -59,9 +61,9 @@ class WorkPage extends Component {
 						return (
 							<AnimateScrollDiv 
 								key={i} 
-								offset={this.state.scrollOffset}
 								id={"featured-work-item"+i} 
-								className="" animation={i % 2 == 0 ? "zoomInLeft" : "zoomInRight"} 
+								className="" 
+								animation={i % 2 == 0 ? "zoomInLeft" : "zoomInRight"} 
 								scrollPercentage={scrollPercentage}
 							>
 								<FeaturedWorkComponent title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description}/>

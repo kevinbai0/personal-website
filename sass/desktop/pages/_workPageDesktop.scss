@@ -1,0 +1,12 @@
+@media only screen and (min-width: 800px) {
+	.work-page {
+		.featured-work-container {
+			display: grid;
+			grid-auto-rows: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 6.67vw;
+			margin: 0 6.67vw;
+		}
+	}
+	
+}

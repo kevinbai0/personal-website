@@ -1,4 +1,4 @@
-@import "../definitions";
+@import "../../definitions";
 
 $titleFontSize: 4vw;
 
@@ -29,7 +29,8 @@ $titleFontSize: 4vw;
 		}
 		.about-landing-section {
 			padding: 10vw 5vw 5vw;
-			p {
+			div {
+				margin: 3vw 0;
 				font-size: 3vw;
 			}
 		}
@@ -116,6 +117,9 @@ $titleFontSize: 4vw;
 				margin: 5vw 5vw 2vw;
 				font-size: $titleFontSize;
 			}
+			.enter-email-view {
+				margin: 0 25%;
+			}
 			.my-email {
 				margin-top: 5vw;
 			}
@@ -187,19 +191,6 @@ $titleFontSize: 4vw;
 					font-size: 2vw;
 				}
 			}
-		}
-	}
-
-	.enter-email-view {
-		width: 50%;
-		margin: 0 0 0 25%;
-		.email-input {
-			font-size: 3vw;
-			padding: 1vw 10%;
-		}
-		.send-button {
-			font-size: 3vw;
-			padding: 1vw 0;
 		}
 	}
 }
