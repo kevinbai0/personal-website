@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Footer from "./Footer";
 import "animate.css";
+import NavigationBar from "./NavigationBar";
 
 const FeaturedWorkItem = (props) => {
 	return <div id={props.id} className={"featured-work-item " + props.classAddon}>
@@ -161,6 +162,7 @@ class LandingPage extends Component {
 		}
 		return (
 			<div className="landing-page">
+				{this.props.navigationBar}
 				<div className="main-landing-section">
 					<h1 className="title bounceIn animated">Kevin Bai</h1>
 					<h2 className="subtitle bounceIn animated">Mobile and web developer</h2>
@@ -170,7 +172,7 @@ class LandingPage extends Component {
 				</div>
 				<div className="about-landing-section">
 					<p className={this.state.classes.tagline2} id="tagline2">From <span>design</span> to <span>development</span>, you’re completely covered.</p>
-					<p className={this.state.classes.tagline3} id="tagline3"> I specialize in <span>mobile apps</span> and <span>websites</span> .</p>
+					<p className={this.state.classes.tagline3} id="tagline3"> I specialize in <span>mobile apps</span> and <span>websites</span>.</p>
 				</div>
 				<div className="featured-landing-section">
 					<h1 className="title">Featured Work</h1>

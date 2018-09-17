@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 class Footer extends Component {
@@ -6,11 +7,11 @@ class Footer extends Component {
 		return (
 			<footer>
 				<div className="nav-items">
-					<div>Home</div>
-					<div>Work</div>
-					<div>Blog</div>
-					<div>Contact</div>
-					<div>About</div>
+					<div><Link to="/">Home</Link></div>
+					<div><Link to="/work">Work</Link></div>
+					<div><Link to="/blog">Blog</Link></div>
+					<div><Link to="/contact">Contact</Link></div>
+					<div><Link to="/about">About Me</Link></div>
 				</div>
 				<div className="social-media-symbols">
 					<a target="_blank" href="https://instagram.com/kevinbai0"><img src="/assets/igLogo.png" alt="instagram"/></a>

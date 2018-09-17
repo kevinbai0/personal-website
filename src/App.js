@@ -15,31 +15,24 @@ class App extends Component {
 		return (
 			<Router>
 				<div>
-					<Route path ="/" render={ () => 
-						<NavigationBar 
-							navItems={[
-								{name: "Home", link: "/"}, 
-								{name: "Work", link: "/work"}, 
-								{name: "Blog", link: "/blog"}, 
-								{name: "Contact", link: "/contact"}, 
-								{name: "About Me", link: "/about"}
-							]}
-							selected={this.state.selectedPage}
-							switchNavSection={this.switchNavSection}
-						/> 
-					}/>
-					<Route exact path="/" render={() => <LandingPage />}/>
-					<Route path="/about" render={() => <AboutPage />}/>
+					<Route exact path="/" render={() => <LandingPage navigationBar={this.getNavBar(0)}/>}/>
+					<Route path="/about" render={() => <AboutPage navigationBar={this.getNavBar(4)}/> }/>
 				</div>
 			</Router>
 		);
 	}
 
-	switchNavSection = (i) => {
-		console.log(i);
-		this.setState({
-			selectedPage: i
-		})
+	getNavBar = (i) => {
+		return <NavigationBar
+			navItems={[
+				{name: "Home", link: "/"}, 
+				{name: "Work", link: "/work"}, 
+				{name: "Blog", link: "/blog"}, 
+				{name: "Contact", link: "/contact"}, 
+				{name: "About Me", link: "/about"}
+			]}
+			selected={i}
+		/>
 	}
 }
 

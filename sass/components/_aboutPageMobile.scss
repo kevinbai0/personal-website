@@ -19,6 +19,10 @@ $largeFontSize: 12vw;
 }
 
 .about-page {
+	a {
+		text-decoration: inherit;
+		color: inherit;
+	}
 	font-family: $mainFont;
 	color: #333;
 	.about-main-section {

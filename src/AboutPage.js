@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import NavigationBar from "./NavigationBar";
 import "animate.css";
 
 class AboutPage extends Component {
@@ -35,14 +37,20 @@ class AboutPage extends Component {
 	componentDidMount() {
 		window.addEventListener("scroll", () => {
 			var change = false;
-			Object.keys(this.state).map((key) => {
-				this.animateTag(key, 0.25, "bounceInLeft");
+			Object.keys(this.state).map((key) => 
+			{
+				if (key.includes("programmingThing")) {
+					this.animateTag(key, 0.25, "flipInX");
+				}
+				else this.animateTag(key, 0.25, "bounceInLeft");
 			});
 		})
 	}
 
 	animateTag = (tag, scrollPercentage, animation) => {
-		const tagRect = document.getElementById(tag).getBoundingClientRect();
+		let elem = document.getElementById(tag);
+		if (elem == null) return;
+		const tagRect = elem.getBoundingClientRect();
 		const tagOffset = tagRect.y + window.pageYOffset - window.innerHeight + window.innerHeight * scrollPercentage;
 		if (window.pageYOffset >= tagOffset) {
 			if (this.state[tag] === "hidden") {
@@ -55,6 +63,7 @@ class AboutPage extends Component {
 
 	render() {
 		return <div className="about-page">
+			{this.props.navigationBar}
 			<div className="about-main-section">
 				<div className={"title " + this.state.title} id="title">Hi, I'm Kevin Bai</div>
 				<div className={"subtitle " + this.state.subtitle} id="subtitle">I'm a 17 year old high school student</div>
@@ -62,7 +71,7 @@ class AboutPage extends Component {
 			<div className="about-programming-section">
 				<div className={"programming-description " + this.state.programmingTitle } id="programmingTitle">I love programming 👨🏽‍💻</div>
 				<div className={"programming-description " + this.state.programmingTitle2 } id="programmingTitle2">Especially mobile apps and websites 📱🖥</div>
-				<div className={"programming-description " + this.state.programmingTitle3 } id="programmingTitle3">Check out my <span className="colored-teal"><a>portfolio</a></span> 💁🏽‍♂️</div>
+				<div className={"programming-description " + this.state.programmingTitle3 } id="programmingTitle3">Check out my <span className="colored-teal"><Link to="/work">portfolio</Link></span> 💁🏽‍♂️</div>
 				<div className={"programming-description-large " + this.state.programmingTitle4} id="programmingTitle4">but, I also program other <span className="colored-coral"><a>things</a></span></div>
 				<div className="programming-things-container">
 					<div id="programmingThing1" className={this.state.programmingThing1}>Robots</div>

@@ -3,7 +3,7 @@
 $coral: #E35650;
 $teal: $secondaryColor;
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 800px) {
 	.about-page {
 		font-family: $mainFont;
 		color: #333;
@@ -33,11 +33,11 @@ $teal: $secondaryColor;
 			padding: 5vw 5vw 5vw;
 			.programming-description {
 				font-size: 3vw;
-				padding-top: 2vw;
+				padding-top: 4vw;
 			}
 			.programming-description-large {
 				font-size: 6vw;
-				margin-top: 5vw;
+				margin-top: 8vw;
 			}
 			.programming-things-container {
 				margin-top: 0vw;
@@ -52,14 +52,15 @@ $teal: $secondaryColor;
 			padding: 5vw 5vw;
 			.robotics-description {
 				font-size: 3vw;
+				margin-top: 2vw;
 			}
 			.robotics-description-title {
 				font-size: 4.5vw;
-				margin-top: 1vw;
+				margin-top: 2vw;
 			}
 			.robotics-description-huge-title {
 				font-size: 8vw;
-				margin-top: 4vw;
+				margin-top: 6vw;
 			}
 		}
 		.about-sports-section {
@@ -78,7 +79,7 @@ $teal: $secondaryColor;
 	
 			.sports-description-huge {
 				font-size: 5.5vw;
-				margin: 1vw 0 0;
+				margin: 3vw 0 0;
 			}
 			.sports-description-medium {
 				font-size: 2vw;
