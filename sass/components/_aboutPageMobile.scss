@@ -22,6 +22,10 @@ $largeFontSize: 12vw;
 	a {
 		text-decoration: inherit;
 		color: inherit;
+		transition: all 0.5s ease;
+	}
+	a:hover {
+		opacity: 0.5;
 	}
 	font-family: $mainFont;
 	color: #333;
@@ -118,7 +122,7 @@ $largeFontSize: 12vw;
 	}
 
 	.about-connect-section {
-		background-color: #F8772A;
+		background-color: $coral;
 		display: flex;
 		color: white;
 		font-size: 12vw;

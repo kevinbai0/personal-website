@@ -655,6 +655,10 @@ nav .nav-item.dark {
 .about-page a {
   text-decoration: inherit;
   color: inherit;
+  transition: all 0.5s ease;
+}
+.about-page a:hover {
+  opacity: 0.5;
 }
 .about-page .about-main-section {
   height: 150vw;
@@ -747,7 +751,7 @@ nav .nav-item.dark {
   margin-left: 5vw;
 }
 .about-page .about-connect-section {
-  background-color: #F8772A;
+  background-color: #E35650;
   display: flex;
   color: white;
   font-size: 12vw;
@@ -842,7 +846,7 @@ nav .nav-item.dark {
   }
   .about-page .about-connect-section {
     display: flex;
-    font-size: 6vw;
+    font-size: 4vw;
     justify-content: space-between;
     align-items: center;
     padding: 5vw 16vw 5vw 5vw;

@@ -72,7 +72,7 @@ class AboutPage extends Component {
 				<div className={"programming-description " + this.state.programmingTitle } id="programmingTitle">I love programming 👨🏽‍💻</div>
 				<div className={"programming-description " + this.state.programmingTitle2 } id="programmingTitle2">Especially mobile apps and websites 📱🖥</div>
 				<div className={"programming-description " + this.state.programmingTitle3 } id="programmingTitle3">Check out my <span className="colored-teal"><Link to="/work">portfolio</Link></span> 💁🏽‍♂️</div>
-				<div className={"programming-description-large " + this.state.programmingTitle4} id="programmingTitle4">but, I also program other <span className="colored-coral"><a>things</a></span></div>
+				<div className={"programming-description-large " + this.state.programmingTitle4} id="programmingTitle4">but, I also program other <span className="colored-coral"><a target="_blank" href="https://github.com/kevinbai0">things</a></span></div>
 				<div className="programming-things-container">
 					<div id="programmingThing1" className={this.state.programmingThing1}>Robots</div>
 					<div id="programmingThing2" className={this.state.programmingThing2}>Arduinos</div>
@@ -82,16 +82,16 @@ class AboutPage extends Component {
 			</div>
 			<div className="about-robotics-section">
 				<div className={"robotics-description " + this.state.roboticsTitle1 } id="roboticsTitle1">I know a thing or two about robotics</div>
-				<div className={"robotics-description-title " + this.state.roboticsTitle2 } id="roboticsTitle2">I started a <span className="colored-orange extra-bold">FIRST</span> Robotics Team at my school</div>
-				<div className={"robotics-description-huge-title " + this.state.roboticsTitle3} id="roboticsTitle3">We're called <span className="colored-coral">Falcotronix</span></div>
+				<div className={"robotics-description-title " + this.state.roboticsTitle2 } id="roboticsTitle2">I started a <span className="colored-orange extra-bold"><a target="_blank" href="https://www.firstinspires.org/">FIRST</a></span> Robotics Team at my school</div>
+				<div className={"robotics-description-huge-title " + this.state.roboticsTitle3} id="roboticsTitle3">We're called <span className="colored-coral"><a target="_blank" href="http://www.sihrobotics.com">Falcotronix</a></span></div>
 			</div>
 
 			<div className="about-sports-section">
 				<div className={"sports-description " + this.state.sportsDescription1} id="sportsDescription1">I love sports</div>
 				<div className={"sports-description-bigger " + this.state.sportsDescription2} id="sportsDescription2">My favourite sport is soccer ⚽️</div>
-				<div className={"sports-description-small " + this.state.sportsDescription3} id="sportsDescription3">I play competitively for the <span className="colored-blue">Thunder Bay Chill</span> Reserve Male Team</div>
+				<div className={"sports-description-small " + this.state.sportsDescription3} id="sportsDescription3">I play competitively for the <span className="colored-blue"><a href="https://www.thunderbaychill.com" target="_blank">Thunder Bay Chill</a></span> Reserve Male Team</div>
 				<div className={"sports-description-small " + this.state.sportsDescription4} id="sportsDescription4">I also play on my Varsity High School Team</div>
-				<div className={"sports-description-huge " + this.state.sportsDescription5} id="sportsDescription5">Last year, we won bronze at <span className="colored-coral">OFSAA</span></div>
+				<div className={"sports-description-huge " + this.state.sportsDescription5} id="sportsDescription5">Last year, we won bronze at <span className="colored-coral"><a href="http://www.ofsaa.on.ca/boys-aaa-soccer" target="_blank">OFSAA</a></span></div>
 				<div className={"sports-description-bigger " + this.state.sportsDescription6} id="sportsDescription6">I also play volleyball and basketball</div>
 				<div className={"sports-description-medium " + this.state.sportsDescription7} id="sportsDescription7">2 years of</div>
 				<div className={"sports-description-small indented " + this.state.sportsDescription8} id="sportsDescription8">Junior Varsity Basketball 🏀</div>
@@ -99,7 +99,7 @@ class AboutPage extends Component {
 				<div className={"sports-description-small indented " + this.state.sportsDescription10} id="sportsDescription10">Varsity Volleyball 🏐</div>
 			</div>
 			<div className="about-connect-section">
-				<div className="content">Let's Connect!</div>
+				<div className="content"><Link to="/contact">Let's Connect!</Link></div>
 				
 				<svg width="23px" height="80px" viewBox="0 0 23 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 					<desc>Created with Sketch.</desc>
