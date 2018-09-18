@@ -6,18 +6,21 @@
 		.contact-section {
 			font-size: 3vw;
 			padding: 0 0 5vw 0;
+			text-align: center;
 			.title {
 				margin: 5vw 5vw 0;
-				font-size: 5vw;
+			}
+			.enter-email-view {
+				margin: 5vw 25vw 0;
 			}
 			.my-email {
-				margin-top: 5vw;
+				margin: 2vw 0 0 0;
 			}
 			.my-number {
-				margin-top: 2vw;
+				margin: 2vw 0 0 0;
 			}
 			.my-location {
-				margin-top: 3vw;
+				margin: 3vw 0 0 0;
 			}
 		}
 	}

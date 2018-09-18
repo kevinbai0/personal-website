@@ -1,11 +1,18 @@
 @media only screen and (min-width: 800px) {
 	.work-page {
+		margin: 10vw 0 0;
+
+		.underlined-title {
+		.underlined {
+			width: 15%;
+		}
+	}
 		.featured-work-container {
 			display: grid;
 			grid-auto-rows: auto;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 6.67vw;
-			margin: 0 6.67vw;
+			margin: 5vw 6.67vw;
 		}
 	}
 	

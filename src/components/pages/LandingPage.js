@@ -133,9 +133,9 @@ class LandingPage extends Component {
 								</AnimateScrollDiv>)
 						}
 					</div>
-					<div className="triangle"></div>
+					{/*<div className="triangle"></div>*/}
 				</div>
-				<div className="testimonials-landing-section">
+				{/*<div className="testimonials-landing-section">
 					<div className="title">Testimonials</div>
 					{
 						testimonialItem != null ?
@@ -158,7 +158,7 @@ class LandingPage extends Component {
 							})
 						}
 					</AnimateScrollDiv>
-				</div>
+					</div>*/}
 				<div className="contact-landing-section">
 					<div className="title">Get in touch</div>
 					<AnimateScrollDiv id="email-animate-container" scrollPercentage={0.25} animation="flipInX">

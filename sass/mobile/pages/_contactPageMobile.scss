@@ -1,16 +1,18 @@
 @import "../../definitions";
 
 .contact-page {
-	margin: 20vw 0 0;
+	margin: 25vw 0 0;
 	.contact-section {
 		padding-bottom: 15vw;
 		.title {
-			@include headerStyle(true, $darkColor);
-			margin: 10vw 0;
 			text-align: center;
 		}
 		text-align: center;
 		@include bodyStyle(true, $darkColor);
+
+		.enter-email-view {
+			margin: 10vw 5vw;
+		}
 		.my-email {
 			margin-top: 15vw;
 		}

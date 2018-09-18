@@ -9,33 +9,30 @@ import ContactPage from './components/pages/ContactPage';
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			selectedPage: 0
-		}
 	}
 	render() {
 		return (
 			<Router>
 				<div>
-					<Route exact path="/" render={() => <LandingPage navigationBar={this.getNavBar(0)}/>}/>
-					<Route path="/about" render={() => <AboutPage navigationBar={this.getNavBar(4)}/> }/>
-					<Route path="/work" render={() => <WorkPage navigationBar={this.getNavBar(1)} /> }/>
-					<Route path="/contact" render={() => <ContactPage navigationBar={this.getNavBar(3)} /> } />
+					<Route exact path="/" render={() => <LandingPage navigationBar={this.getNavBar(0, true)}/>}/>
+					<Route path="/about" render={() => <AboutPage navigationBar={this.getNavBar(3, true)}/> }/>
+					<Route path="/work" render={() => <WorkPage navigationBar={this.getNavBar(1, false)} /> }/>
+					<Route path="/contact" render={() => <ContactPage navigationBar={this.getNavBar(2, false)} /> } />
 				</div>
 			</Router>
 		);
 	}
 
-	getNavBar = (i) => {
+	getNavBar = (i, light) => {
 		return <NavigationBar
 			navItems={[
 				{name: "Home", link: "/"}, 
 				{name: "Work", link: "/work"}, 
-				{name: "Blog", link: "/blog"}, 
 				{name: "Contact", link: "/contact"}, 
 				{name: "About Me", link: "/about"}
 			]}
 			selected={i}
+			lightBar={light}
 		/>
 	}
 }
