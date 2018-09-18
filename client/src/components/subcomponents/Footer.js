@@ -9,7 +9,6 @@ class Footer extends Component {
 				<div className="nav-items">
 					<div><Link to="/">Home</Link></div>
 					<div><Link to="/work">Work</Link></div>
-					<div><Link to="/blog">Blog</Link></div>
 					<div><Link to="/contact">Contact</Link></div>
 					<div><Link to="/about">About Me</Link></div>
 				</div>

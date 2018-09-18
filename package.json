@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kevinbai0/personal-website#readme",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
