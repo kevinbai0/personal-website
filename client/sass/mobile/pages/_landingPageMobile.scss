@@ -1,6 +1,14 @@
 @import "../../definitions";
 
 .landing-page {
+	a {
+		text-decoration: inherit;
+		color: inherit;
+		transition: all 0.5s ease;
+	}
+	a:hover {
+		opacity: 0.5;
+	}
 	.main-landing-section {
 		width: 100vw;
 		height: 150vw;

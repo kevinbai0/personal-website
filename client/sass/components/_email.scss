@@ -10,7 +10,7 @@
 	transition: all 0.5s ease;
 	.email-input {
 		padding: 2vw 10%;
-		font-size: 8vw;
+		font-size: 6vw;
 		border: none;
 		width: 60%;
 		font-family: "Nunito Sans";
@@ -43,11 +43,11 @@
 	.enter-email-view {
 		width: 50%;
 		.email-input {
-			font-size: 3vw;
-			padding: 0.5vw 10%;
+			font-size: 2.5vw;
+			padding: 0.5vw 5%;
 		}
 		.send-button {
-			font-size: 3vw;
+			font-size: 2.5vw;
 			padding: 0.5vw 0;
 		}
 	}

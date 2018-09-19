@@ -54,8 +54,10 @@ class LandingPage extends Component {
 				{ src: "/assets/meCropped.jpg", quote: "\"5. Written testimonials from customers. Cool stuff, I know get some good stuff written about me to put on here and that would be great!\"", speaker: "Kevin Bai" },
 			],
 			currentTestimonialNumber: 0,
-			offsetY: 0
+			offsetY: 0,
+			modalComponent: ""
 		}
+		this.toggleModal = this.toggleModal.bind(this)
 	}
 
 	componentWillMount() {
@@ -74,25 +76,6 @@ class LandingPage extends Component {
 			pageYOffset: window.pageYOffset
 		})
 	}
-	updateTag = (newClasses, tag, scrollPosition, animation) => {
-		if (window.pageYOffset > scrollPosition) {
-			if (newClasses[tag] === "hidden") {
-				newClasses[tag] = "animated " + animation;
-				return true;
-			}
-		}
-		return false;
-	}
-	updateSubTag = (newClasses, tagGroup, index, scrollPosition, animation) => {
-		if (window.pageYOffset > scrollPosition) {
-			if (newClasses[tagGroup][index] === "hidden") {
-				newClasses[tagGroup][index] = "animated " + animation;
-				console.log(newClasses[tagGroup][index]);
-				return true;
-			}
-		}
-		return false;
-	}
 
 	render() {
 		let testimonialItem = null;
@@ -101,6 +84,7 @@ class LandingPage extends Component {
 		}
 		return (
 			<div className="landing-page">
+				{this.state.modalComponent}
 				{this.props.navigationBar}
 				<div className="main-landing-section">
 					<h1 className="title bounceIn animated">Kevin Bai</h1>
@@ -162,9 +146,9 @@ class LandingPage extends Component {
 				<div className="contact-landing-section">
 					<div className="title">Get in touch</div>
 					<AnimateScrollDiv id="email-animate-container" scrollPercentage={0.25} animation="flipInX">
-						<EmailComponent />
+						<EmailComponent toggleModal={this.toggleModal}/>
 					</AnimateScrollDiv>
-					<div className="my-email">me@kevinbai.design</div>
+					<div className="my-email"><a href="mailto:kevin.c.bai0@gmail.com">kevin.c.bai0@gmail.com</a></div>
 					<div className="my-number">+1 (807) 633-4358</div>
 					<div className="my-location">Located in 
 Thunder Bay, Ontario, Canada</div>
@@ -186,7 +170,12 @@ Thunder Bay, Ontario, Canada</div>
 				item.className = "testimonial-item animated zoomIn";
 			})
 		}, 500)
-		
+	}
+
+	toggleModal(component, completion = () => {}) {
+		this.setState({
+			modalComponent: component
+		}, completion());
 	}
 }
 

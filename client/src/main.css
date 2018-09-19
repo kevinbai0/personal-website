@@ -15,6 +15,14 @@
   width: 20%;
 }
 
+.landing-page a {
+  text-decoration: inherit;
+  color: inherit;
+  transition: all 0.5s ease;
+}
+.landing-page a:hover {
+  opacity: 0.5;
+}
 .landing-page .main-landing-section {
   width: 100vw;
   height: 150vw;
@@ -1023,7 +1031,7 @@ nav .nav-item.dark {
 }
 .enter-email-view .email-input {
   padding: 2vw 10%;
-  font-size: 8vw;
+  font-size: 6vw;
   border: none;
   width: 60%;
   font-family: "Nunito Sans";
@@ -1056,11 +1064,11 @@ nav .nav-item.dark {
     width: 50%;
   }
   .enter-email-view .email-input {
-    font-size: 3vw;
-    padding: 0.5vw 10%;
+    font-size: 2.5vw;
+    padding: 0.5vw 5%;
   }
   .enter-email-view .send-button {
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding: 0.5vw 0;
   }
 }
@@ -1093,6 +1101,42 @@ nav .nav-item.dark {
     border-radius: 2px;
   }
 }
+.notification-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 15vh;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  background-color: white;
+  transition: all 0.5s ease;
+  background-size: 600% 600%;
+  color: white;
+  font-family: "Tajawal";
+  font-size: 4vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification-modal div {
+  margin: auto 0;
+}
+
+.notification-modal.green {
+  background-color: #7CF510;
+}
+
+.notification-modal.red {
+  background-color: #cb2d3e;
+}
+
+.notification-modal.yellow {
+  background-color: #CAC531;
+  /* fallback for old browsers */
+}
+
 .hidden {
   visibility: hidden;
 }
