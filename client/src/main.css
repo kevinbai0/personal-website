@@ -469,6 +469,14 @@
   font-weight: 300;
   margin-top: 10vw;
 }
+.contact-page a {
+  text-decoration: inherit;
+  color: inherit;
+  transition: all 0.5s ease;
+}
+.contact-page a:hover {
+  opacity: 0.5;
+}
 
 @media only screen and (min-width: 800px) {
   .landing-page .main-landing-section {

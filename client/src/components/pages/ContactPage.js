@@ -23,7 +23,7 @@ class ContactPage extends Component {
 					<div className="underlined width-20"></div>
 				</div>
 					<AnimateScrollDiv id="email" animation={"flipInX"} scrollPercentage={-1}><EmailComponent toggleModal={this.toggleModal.bind(this)}/></AnimateScrollDiv>
-					<div className="my-email animated bounceInUp">me@kevinbai.design</div>
+					<div className="my-email animated bounceInUp"><a href="mailto:kevin.c.bai0@gmail.com">kevin.c.bai0@gmal.com</a></div>
 					<div className="my-number animated bounceInUp">+1 (807) 633-4358</div>
 					<div className="my-location animated bounceInUp">Located in 
 Thunder Bay, Ontario, Canada</div>
