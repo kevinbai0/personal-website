@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
 	app.use(express.static(path.join(__dirname, 'client/build')));
 	app.use((req,res) => {
 		console.log("Redirect");
-		res.redirect("https://www.kevinbai.design/" + req.url);
+		res.redirect("https://www.kevinbai.design" + req.url);
 	})
 	// Handle React routing, return all requests to React app
 	app.get('/', function(req, res) {
