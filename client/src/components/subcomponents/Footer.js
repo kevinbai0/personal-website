@@ -18,7 +18,7 @@ class Footer extends Component {
 					<a target="_blank" href="https://github.com/kevinbai0"><img src="/assets/github.png" alt="github"/></a>
 				</div>
 				<div className="email">
-					me@kevinbai.design
+					<a href="mailto:kevin.c.bai0@gmail.com">kevin.c.bai0@gmail.com</a>
 				</div>
 			</footer>
 		);

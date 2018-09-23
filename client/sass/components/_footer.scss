@@ -1,6 +1,15 @@
 @import "../definitions";
 
 footer {
+	a {
+		text-decoration: inherit;
+		color: inherit;
+		transition: all 0.5s ease;
+		cursor: pointer;
+	}
+	a:hover {
+		opacity: 0.5;
+	}
 	background-color: $darkColor;
 	display: grid;
 	grid-template-rows: 5fr 1fr;
@@ -13,17 +22,9 @@ footer {
 		grid-column: 1/2;
 		font-size: 8vw;
 		div {
-			a {
-				text-decoration: inherit;
-				color: inherit;
-			}
 			margin-top: 2vw;
-			cursor: pointer;
-			transition: all 0.5s ease;
 		}
-		div:hover {
-			opacity: 0.5;
-		}
+		
 	}
 	.social-media-symbols {
 		justify-self: end;
