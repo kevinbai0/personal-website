@@ -90,7 +90,7 @@ class AboutPage extends Component {
 			<div className="about-robotics-section">
 				<div className={"robotics-description " + this.state.roboticsTitle1 } id="roboticsTitle1">I know a thing or two about robotics</div>
 				<div className={"robotics-description-title " + this.state.roboticsTitle2 } id="roboticsTitle2">I started a <span className="colored-orange extra-bold"><a target="_blank" href="https://www.firstinspires.org/">FIRST</a></span> Robotics Team at my school</div>
-				<div className={"robotics-description-huge-title " + this.state.roboticsTitle3} id="roboticsTitle3">We're called <span className="colored-coral"><a target="_blank" href="http://www.sihrobotics.com">Falcotronix</a></span></div>
+				<div className={"robotics-description-huge-title " + this.state.roboticsTitle3} id="roboticsTitle3">We're called <span className="colored-coral"><a target="_blank" href="http://www.falcotronix.com">Falcotronix</a></span></div>
 			</div>
 
 			<div className="about-sports-section">
