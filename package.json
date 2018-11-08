@@ -20,7 +20,9 @@
   "homepage": "https://github.com/kevinbai0/personal-website#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "nodemailer": "^4.6.8"
+    "node-fetch": "^2.2.1",
+    "nodemailer": "^4.6.8",
+    "unsplash-js": "^4.8.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"

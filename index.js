@@ -1,11 +1,12 @@
 const express = require("express");
 const path = require('path');
-
+const fetch = require("node-fetch");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(express.static('public'))
 
 let nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
@@ -16,7 +17,7 @@ var transporter = nodemailer.createTransport({
 	}
 });
 
-//if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
 	// Serve any static files
 	app.use(express.static(path.join(__dirname, 'client/build')));
 	// Handle React routing, return all requests to React app
@@ -36,7 +37,11 @@ var transporter = nodemailer.createTransport({
 		res.redirect("https://www.kevinbai.design/about");
 		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 	});
-//}
+	app.get("/searchEngine", function(req, res) {
+		res.redirect("https://www.kevinbai.design/searchEngine");
+		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+	})
+}
 
 app.post("/api/email", (req,res) => {
 	let options = {
@@ -51,8 +56,10 @@ app.post("/api/email", (req,res) => {
 			success: "Ok"
 		}));
 	}, 1000)
-	
+})
+app.get("/api/photoOfTheDay", (req, res) => {
+	res.end(JSON.stringify({imageURL: "/image.jpg"}));
 })
 
 
-app.listen(port, () => console.log());
+app.listen(port, () => console.log("Running on port " + port));

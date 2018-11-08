@@ -5,6 +5,7 @@ import NavigationBar from './components/subcomponents/NavigationBar';
 import AboutPage from './components/pages/AboutPage';
 import WorkPage from './components/pages/WorkPage';
 import ContactPage from './components/pages/ContactPage';
+import SearchEngine from "./components/pages/SearchEngine";
 
 class App extends Component {
 	constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
 					<Route path="/about" render={() => <AboutPage navigationBar={this.getNavBar(3, true)}/> }/>
 					<Route path="/work" render={() => <WorkPage navigationBar={this.getNavBar(1, false)} /> }/>
 					<Route path="/contact" render={() => <ContactPage navigationBar={this.getNavBar(2, false)} /> } />
+					<Route path="/searchEngine" render={() => <SearchEngine navigationBar={this.getNavBar(-1, false)} />} />
 				</div>
 			</Router>
 		);

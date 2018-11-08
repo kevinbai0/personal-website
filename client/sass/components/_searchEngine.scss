@@ -1,0 +1,60 @@
+$mainFont: "Tajawal";
+$secondaryFont: "Quicksand";
+
+.search-engine {
+    font-family: $mainFont, "sans-serif";
+
+    background-color: #333333;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    img {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    div.app-content {
+        background-color: rgba(0,0,0,0.4);
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        div.welcome-title {
+            color: white;
+            font-size: 8vw;
+            font-weight: 900;
+            align-self: end;
+        }
+        .search-bar {
+            align-self: start;
+            font-family: $secondaryFont;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 4vw;
+            border: none;
+            padding: 1vw 5vw;
+            font-size: 4vw;
+            width: 50%;
+            border: 3px solid rgba(#ffffff, 0);
+            transition: all 0.2s ease;
+        }
+        :focus {
+            border: 3px solid #23B7E7;
+            outline: none;
+        }
+    }
+    
+}
+
