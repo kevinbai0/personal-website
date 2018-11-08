@@ -38,18 +38,24 @@ $secondaryFont: "Quicksand";
             font-weight: 900;
             align-self: end;
         }
-        .search-bar {
+        form {
             align-self: start;
-            font-family: $secondaryFont;
-            background-color: rgba(255,255,255,0.8);
-            border-radius: 4vw;
-            border: none;
-            padding: 1vw 5vw;
-            font-size: 4vw;
-            width: 50%;
-            border: 3px solid rgba(#ffffff, 0);
-            transition: all 0.2s ease;
+            justify-self: center;
+            display: grid;
+            justify-items: center;
+            .search-bar {
+                font-family: $secondaryFont;
+                background-color: rgba(255,255,255,0.8);
+                border-radius: 4vw;
+                border: none;
+                padding: 1vw 5vw;
+                width: 100%;
+                font-size: 4vw;
+                border: 3px solid rgba(#ffffff, 0);
+                transition: all 0.2s ease;
+            }
         }
+        
         :focus {
             border: 3px solid #23B7E7;
             outline: none;
