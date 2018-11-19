@@ -41,6 +41,10 @@ if (process.env.NODE_ENV === 'production') {
 		res.redirect("https://www.kevinbai.design/searchEngine");
 		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 	})
+	app.get("/seminar", function(req, res) {
+		res.redirect("https://www.kevinbai.design/seminar");
+		res.sendFile(path.join(__dirname, 'english-seminar/build', 'index.html'));
+	})
 }
 
 app.post("/api/email", (req,res) => {
@@ -62,4 +66,4 @@ app.get("/api/photoOfTheDay", (req, res) => {
 })
 
 
-app.listen(port, () => console.log("Running on port " + port));
+app.listen(4000, () => console.log("Running on port " + port));
