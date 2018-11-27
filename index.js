@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 const app = express();
 const port = process.env.PORT || 5000;
 
+
 app.use(express.json());
 app.use(express.static('public'))
 
@@ -17,9 +18,10 @@ var transporter = nodemailer.createTransport({
 	}
 });
 
+
 if (process.env.NODE_ENV === 'production') {
 	// Serve any static files
-	app.use(express.static(path.join(__dirname, 'client/build')));
+	app.use("/", express.static(path.join(__dirname, 'client/build')));
 	// Handle React routing, return all requests to React app
 	app.get('/', function(req, res) {
 		res.redirect("https://www.kevinbai.design/");
@@ -47,6 +49,7 @@ if (process.env.NODE_ENV === 'production') {
 	})
 }
 
+
 app.post("/api/email", (req,res) => {
 	let options = {
 		from: "kevin.c.bai0@gmail.com",
@@ -63,7 +66,37 @@ app.post("/api/email", (req,res) => {
 })
 app.get("/api/photoOfTheDay", (req, res) => {
 	res.end(JSON.stringify({imageURL: "/image.jpg"}));
+});
+
+
+
+// Serve any static files
+app.use("/stop-motion/", express.static(path.join(__dirname, "client-stop-motion/build")))
+app.get("/stop-motion", function(req, res) {
+	res.sendFile(path.join(__dirname, 'client-stop-motion/build', 'index.html'));
+});
+
+app.use("/about", express.static(path.join(__dirname, 'client/build')));
+// Handle React routing, return all requests to React app
+app.get('/about', function(req, res) {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
+/*app.get('/contact', function(req, res) {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+app.get('/work', function(req, res) {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+app.get('/about', function(req, res) {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+app.get("/searchEngine", function(req, res) {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 })
+app.get("/seminar", function(req, res) {
+	res.sendFile(path.join(__dirname, 'english-seminar/build', 'index.html'));
+});*/
 
 
 app.listen(port, () => console.log("Running on port " + port));
