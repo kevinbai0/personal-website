@@ -5,7 +5,7 @@ import EmailComponent from "../subcomponents/EmailComponent";
 import AnimateScrollDiv from "../subcomponents/AnimateScrollDiv";
 import getNavBar from "../subcomponents/NavigationBar";
 import Link from 'next/link';
-import "../client/src/main.css";
+import "../stylesheets/main.css";
 import "animate.css";
 import CustomHead from "../subcomponents/CustomHead";
 

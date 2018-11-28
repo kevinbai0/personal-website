@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import FeaturedWorkComponent from "../subcomponents/FeaturedWorkComponent";
 import Footer from "../subcomponents/Footer";
 import AnimateScrollDiv from "../subcomponents/AnimateScrollDiv";
-import "../client/src/main.css";
+import "../stylesheets/main.css";
 import getNavBar from "../subcomponents/NavigationBar";
 import CustomHead from "../subcomponents/CustomHead";
 

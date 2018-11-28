@@ -3,7 +3,7 @@ import EmailComponent from "../subcomponents/EmailComponent";
 import Footer from "../subcomponents/Footer";
 import AnimateScrollDiv from "../subcomponents/AnimateScrollDiv";
 import getNavBar from "../subcomponents/NavigationBar";
-import "../client/src/main.css";
+import "../stylesheets/main.css";
 import CustomHead from "../subcomponents/CustomHead";
 
 class ContactPage extends Component {

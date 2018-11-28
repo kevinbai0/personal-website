@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Footer from "../subcomponents/Footer";
 import Link from "next/link";
 import "animate.css";
+import "../stylesheets/main.css";
 import getNavBar from "../subcomponents/NavigationBar";
 import CustomHead from "../subcomponents/CustomHead";
 
