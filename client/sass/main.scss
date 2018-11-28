@@ -19,6 +19,11 @@
 @import "components/searchEngine";
 
 
+body {
+	padding: 0;
+	margin: 0;
+}
+
 .hidden {
 	visibility: hidden;
 }
