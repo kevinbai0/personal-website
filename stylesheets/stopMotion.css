@@ -1,0 +1,132 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Source Sans Pro";
+}
+.frames-controller {
+    display: grid;
+    grid-template-rows: 10vh 20vh 70vh;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .colors-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .colors-container img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    position: absolute;
+  }
+  
+  .control-panel {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr auto 2fr 1fr 1fr;
+    align-items: center;
+  }
+  
+  .line-separator {
+    width: 2px;
+    height: 60%;
+    background-color: #696969;
+  }
+  
+  .control-panel .title {
+    justify-self: center;
+  }
+  
+  .duration-selector {
+    justify-self: center;
+  }
+  
+  .start-button {
+    box-shadow: 0 2px 18px 0 rgba(0,0,0,0.5);
+    padding: 1vw;
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+    justify-self: center;
+    width: 60%;
+  }
+  .start-button.inactive {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    background-color: #E3E3E3;
+  }
+  .start-button:hover {
+    transform: scale(1.05);
+  }
+  .start-button.inactive:hover {
+    transform: scale(1);
+  }
+  .start-button:focus {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+  }
+  
+  .control-panel .title {
+    font-size: 4vw;
+    font-weight: 900;
+  }
+  
+  .color-div {
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 4vw;
+  }
+  
+  .animatingNode {
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    border-radius: 1vw;
+  }
+  
+  .files-controller {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0 0 5vw;
+  }
+  
+  .file-menu-item {
+    height: 2vw;
+    background-color: #ECECEC;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 2vw 0 0;
+    padding: 0.5vw 2vw;
+    position: relative;
+    border-radius: 3px;
+  }
+  
+  .file-menu-item input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .file-menu-item:hover {
+    background-color: #47D789;
+    color: white;
+  }
