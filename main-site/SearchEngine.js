@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import search from "../methods/search";
-import "../stylesheets/main.css";
+import "./stylesheets/main.css";
 import CustomHead from "../subcomponents/CustomHead";
 
 class SearchEngine extends Component {

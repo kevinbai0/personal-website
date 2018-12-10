@@ -30,7 +30,7 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
-  background: radial-gradient(rgba(119, 119, 119, 0), rgba(85, 63, 26, 0.4)), url("/static/assets/meMobile.jpg") no-repeat;
+  background: radial-gradient(rgba(119, 119, 119, 0), rgba(85, 63, 26, 0.4)), url("/static/main-site/assets/meMobile.jpg") no-repeat;
   background-position: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -481,7 +481,7 @@
 @media only screen and (min-width: 800px) {
   .landing-page .main-landing-section {
     height: 100vh;
-    background: radial-gradient(rgba(119, 119, 119, 0), rgba(85, 63, 26, 0.4)), url("/static/assets/me.jpg");
+    background: radial-gradient(rgba(119, 119, 119, 0), rgba(85, 63, 26, 0.4)), url("/static/main-site/assets/me.jpg");
     background-position: right top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
