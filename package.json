@@ -26,6 +26,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "animate.css": "^3.7.0",
+    "event-stream": "^4.0.1",
     "next": "^7.0.2",
     "node-fetch": "^2.2.1",
     "nodemailer": "^4.6.8",
