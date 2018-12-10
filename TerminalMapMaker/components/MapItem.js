@@ -8,6 +8,22 @@ import {groupColors} from "../helpers/groupColors";
 class MapItem extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            itemType: "",
+            colorIndex: -1,
+        }
+    }
+    shouldComponentUpdate(newProps) {
+        return newProps.itemType !== this.state.itemType || newProps.colorIndex !== this.state.colorIndex;
+    }
+    static getDerivedStateFromProps(newProps, oldState) {
+        if (newProps.itemType !== oldState.itemType || newProps.colorIndex !== oldState.colorIndex) {
+            return {
+                itemType: newProps.itemType,
+                colorIndex: newProps.colorIndex
+            }
+        }
+        return null;
     }
     render() {
         let {itemType, colorIndex} = this.props;
