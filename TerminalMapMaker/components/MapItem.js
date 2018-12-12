@@ -10,7 +10,7 @@ class MapItem extends React.Component {
         super(props);
         this.state = {
             itemType: "",
-            colorIndex: -1,
+            colorIndex: -1
         }
     }
     shouldComponentUpdate(newProps) {
@@ -26,12 +26,17 @@ class MapItem extends React.Component {
         return null;
     }
     render() {
-        let {itemType, colorIndex} = this.props;
-        let component = <div className={"rendered " + itemType}></div>
+        let {itemType, colorIndex, playerIndex} = this.props;
+        let defaultClass = "rendered ";
+        if (playerIndex === 1) {
+            defaultClass = "rendered enemy ";
+        }
+        let component = <div className={defaultClass + itemType}></div>
 
-        if (itemType === ItemType.FILTER) component = <Filter className="rendered" fillColor={groupColors[colorIndex ? colorIndex : 0]}/>
-        else if (itemType === ItemType.ENCRYPTOR) component = <Encryptor className="rendered" fillColor={groupColors[colorIndex ? colorIndex : 0]} />
-        else if (itemType === ItemType.DESTRUCTOR) component = <Destructor className="rendered" fillColor={groupColors[colorIndex ? colorIndex : 0]}/>
+        if (itemType === ItemType.FILTER) component = <Filter className={defaultClass} fillColor={groupColors[colorIndex ? colorIndex : 0]}/>
+        else if (itemType === ItemType.ENCRYPTOR) component = <Encryptor className={defaultClass} fillColor={groupColors[colorIndex ? colorIndex : 0]} />
+        else if (itemType === ItemType.DESTRUCTOR) component = <Destructor className={defaultClass} fillColor={groupColors[colorIndex ? colorIndex : 0]}/>
+        
         return <div className="grid-item" onMouseOver={() => this.handleHover()} onClick={() => this.handleClick()}>
             {component}
         </div>

@@ -52,6 +52,7 @@ class GameMap extends React.Component {
                                     coordinate={{x: j, y: 27-i}}
                                     itemType={item.type}
                                     colorIndex={item.colorIndex}
+                                    playerIndex={item.playerIndex}
                                     onClick={this.mapItemClick.bind(this)}
                                     onMouseOver={this.mapItemHover.bind(this)}
                                 />

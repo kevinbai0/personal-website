@@ -1,48 +1,6 @@
 const mapMakerStyle = <style jsx>{`
-    .modal {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0,0,0,0.8);
-        z-index: 5;
-        display: grid;
-        justify-items: center;
-        align-items: center;
-    }
-    .modal section.modal-content {
-        width: 50vw;
-        height: 50vh;
-        background-color: #121212;
-        display: grid;
-        grid-template-rows: 1fr 3fr 1fr;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-items: center;
-    }
-    .modal-content .title {
-        color: white;
-        font-weight: 800;
-        font-size: 2vw;
-    }
-    .modal-content .results-field {
-        background-color: #222222;
-        width: 80%;
-        height: 100%;
-        border-radius: 0.25vw;
-        color: white;
-        padding: 1vw;
-    }
-    .modal-content .results-field .points-group {
-        margin: 0 0 1vw;
-    }
-    .modal-content .utility-button {
-        width: 30%;
-    }
-
     .map-maker-container {
-        font-family: sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
         position: absolute;
         margin: 0;
         left: 0;
