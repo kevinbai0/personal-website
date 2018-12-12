@@ -1,3 +1,3 @@
-import MapMaker from "../TerminalMapMaker/MapMaker";
+import MapMaker from "../terminal-map-maker/MapMaker";
 
 export default () => <MapMaker />
