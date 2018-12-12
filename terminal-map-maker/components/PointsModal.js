@@ -32,8 +32,12 @@ class PointsModal extends React.Component {
                     <div className="results-field">
                         {
                             selectedTabIndex === 0 ?
-                                myPoints.map((string, i) => {
-                                    return <div key={i} className="points-group">{string}</div>
+                                myPoints.map((strings, i) => {
+                                    return <div key={i} className="points-group">
+                                        {
+                                            strings.map(string => <div className="point-group">{string}</div>)
+                                        }
+                                    </div>
                                 })
                                 :
                                 enemyPoints.map((string, i) => {

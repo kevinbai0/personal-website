@@ -43,7 +43,7 @@ const mapItemStyle = <style jsx>{`
     opacity: 0.4;
 }
 /*.rendered.filter.enemy, .rendered.encryptor.enemy, .rendered.destructor.enemy {
-    opacity: 0.5;
+    opacity: 0.8;
 }*/
 `}</style>
 
