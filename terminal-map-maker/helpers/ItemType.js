@@ -3,8 +3,7 @@ const ItemType = {
     DESTRUCTOR: "DF",
     FILTER: "FF",
     ENCRYPTOR: "EF",
-    ME: "ME",
-    ENEMY: "ENEMY",
+    VALID: "VALID",
     NON_EXISTENT: "out-of-bounds"
 }
 
