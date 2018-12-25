@@ -1,7 +1,7 @@
 const express = require('express')
 const next = require('next')
 const nodeMailer = require("nodemailer");
-const login = process.env.NODEMAILER_EMAIL ? {
+const login = process.env.NODE_ENV === "production" ? {
     email: process.env.NODEMAILER_EMAIL,
     password: process.env.NODEMAILER_PASSWORD
 } : require("./secrets/email_auth");
