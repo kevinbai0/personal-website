@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import Footer from "./subcomponents/Footer";
 import FeaturedWorkComponent from "./subcomponents/FeaturedWorkComponent";
-import EmailComponent from "./subcomponents/EmailComponent";
 import AnimateScrollDiv from "./subcomponents/AnimateScrollDiv";
 import getNavBar from "./subcomponents/NavigationBar";
 import Link from 'next/link';
 import "./stylesheets/main.css";
 import "animate.css";
 import CustomHead from "./subcomponents/CustomHead";
+import ContactSection from "./subcomponents/ContactSection";
 
 const FullstackItem = (props) => {
 	return <div id={props.id} className={"fullstack-item"}>
@@ -145,17 +145,7 @@ class LandingPage extends Component {
 						}
 					</AnimateScrollDiv>
 					</div>*/}
-				<div className="contact-landing-section">
-					<div className="title">Get in touch</div>
-					<AnimateScrollDiv id="email-animate-container" scrollPercentage={0.25} animation="flipInX">
-						<EmailComponent toggleModal={this.toggleModal}/>
-					</AnimateScrollDiv>
-					<div className="my-email"><a href="mailto:kevin.c.bai0@gmail.com">kevin.c.bai0@gmail.com</a></div>
-					<div className="my-number">+1 (807) 633-4358</div>
-					<div className="my-location">Located in 
-Thunder Bay, Ontario, Canada</div>
-				</div>
-				<Footer />
+				<ContactSection navBarItems={getNavBar(0,true).props.navItems} />
 			</div>
 		)
 	}
