@@ -2,7 +2,7 @@ const express = require('express')
 const next = require('next')
 const nodeMailer = require("nodemailer");
 console.log("CURRENT ENVIRONMENT: " + process.env.NODE_ENV)
-const login = "";
+let login = "";
 
 if (process.env.NODE_ENV === "production") {
     console.log("INIT LOGIN WITH PRODUCTION")
