@@ -1,20 +1,15 @@
 const express = require('express')
 const next = require('next')
-const nodeMailer = require("nodemailer");
+const nodeMailer = require("@sendgrid/mail");
 console.log("CURRENT ENVIRONMENT: " + process.env.NODE_ENV)
 let login = "";
 
 if (process.env.NODE_ENV === "production") {
-    console.log("INIT LOGIN WITH PRODUCTION")
-    console.log(process.env.NODEMAILER_EMAIL);
-    console.log(process.env.NODEMAILER_PASSWORD);
     login = {
-        email: process.env.NODEMAILER_EMAIL,
-        password: process.env.NODEMAILER_PASSWORD
+        apiKey: process.env.SENDGRID_API_KEY
     }
 }
 else {
-    console.log("INIT LOGIN WITH DEVELOPMENT")
     login = require("./secrets/email_auth");
 } 
 
@@ -35,27 +30,22 @@ app.prepare()
         app.render(req, res, "/");
     })
     server.post("/api/email", (req,res) => {
-        var transporter = nodeMailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: login.email,
-                pass: login.password
-            }
-        });
-
-        const mailOptions = {
-            from: req.body.email, // sender address
-            to: login.email, // list of receivers
-            subject: "Client: " + req.body.subject, // Subject line
+        const sgMail = require('@sendgrid/mail');
+        sgMail.setApiKey(login.apiKey);
+        const msg = {
+            to: "kevin.c.bai0@gmail.com",
+            from: req.body.email,
+            subject: req.body.subject,
             html: "<p>Email: " + req.body.email + "</p>" 
                 + "<p>Name: " + req.body.name + "</p>" 
                 + "<p>Subject: " + req.body.subject + "</p>"
                 + "<p>" + req.body.message.split("\n").join("<br/>") + "</p>"
         };
-        transporter.sendMail(mailOptions, (err, info) => {
-            if (err) res.status(500).send("error");
-            else res.send("ok");
-        });
+        sgMail.send(msg).then((sendResponse) => {
+            res.send("ok");
+        }).catch((err) => {
+            res.status(500).send("error");
+        })
     });
 
     server.listen(process.env.PORT || 3000, (err) => {
