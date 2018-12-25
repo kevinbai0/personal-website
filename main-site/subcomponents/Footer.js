@@ -5,7 +5,7 @@ import Link from "next/link";
 class Footer extends Component {
 	render() {
 		return (
-			<footer>
+			<footer className="page-footer">
 				<div className="nav-items">
 					<div><Link href="/"><a>Home</a></Link></div>
 					<div><Link href="/work"><a>Work</a></Link></div>

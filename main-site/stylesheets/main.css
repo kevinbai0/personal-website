@@ -443,31 +443,118 @@
 }
 
 .contact-page {
-  margin: 25vw 0 0;
+  margin: 10vw 0 0;
+  overflow: hidden;
 }
 .contact-page .contact-section {
-  padding-bottom: 15vw;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  position: absolute;
   text-align: center;
   font-family: "Tajawal";
   font-weight: 400;
   color: #333333;
   font-size: 8vw;
 }
-.contact-page .contact-section .title {
+.contact-page .contact-section .background-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0%;
+  z-index: -1;
+}
+.contact-page .contact-section .underlined-title {
   text-align: center;
 }
-.contact-page .contact-section .enter-email-view {
-  margin: 10vw 5vw;
+.contact-page .contact-section .underlined-title .title {
+  text-align: center;
 }
-.contact-page .contact-section .my-email {
-  margin-top: 15vw;
+.contact-page .contact-section .underlined-title .underlined {
+  margin: -2vw auto 0;
 }
-.contact-page .contact-section .my-number {
-  margin-top: 2vw;
+.contact-page .contact-section .contact-form {
+  margin: 5vw 5vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+.contact-page .contact-section .contact-form label {
+  color: #333;
+  font-size: 4vw;
+  margin: 3vw 0 0 1vw;
+}
+.contact-page .contact-section .contact-form .input-field {
+  font-size: 4vw;
+  font-family: "Tajawal";
+  padding: 2vw 2vw 1vw;
+  position: relative;
+  width: calc(100% - 5vw);
+  background: rgba(240, 240, 240, 0.7);
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 12px;
+}
+.contact-page .contact-section .contact-form textarea {
+  position: absolute;
+}
+.contact-page .contact-section .contact-form .submit-btn {
+  background-color: #77ECAD;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 2vw 5vw;
+  font-size: 4vw;
+  margin: 5vw 0 0;
+  outline: none;
+  font-weight: 300;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.contact-page .contact-section .contact-form .submit-btn:hover {
+  transform: scale(1.1);
 }
 .contact-page .contact-section .my-location {
-  font-weight: 300;
-  margin-top: 10vw;
+  color: white;
+  text-align: left;
+  margin: 10vw 5vw 0;
+  font-size: 6vw;
+  font-weight: 900;
+}
+.contact-page .contact-section .contact-footer {
+  margin: 5vw 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 4vw;
+  color: white;
+}
+.contact-page .contact-section .contact-footer .social-media-symbols {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contact-page .contact-section .contact-footer .social-media-symbols img {
+  width: 30%;
+  margin: 0 0 2vw;
+}
+.contact-page .contact-section .contact-footer .page-links-container {
+  margin: 0 0 0 5vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+}
+.contact-page .contact-section .contact-footer .contact-info-section {
+  align-self: end;
+  margin: 0 0 0 5vw;
+  text-align: left;
 }
 .contact-page a {
   text-decoration: inherit;
@@ -795,7 +882,7 @@
     margin: 3vw 0 0 0;
   }
 }
-footer {
+footer.page-footer {
   background-color: #333333;
   display: grid;
   grid-template-rows: 5fr 1fr;
@@ -804,24 +891,24 @@ footer {
   font-family: "Tajawal";
   padding: 5vw;
 }
-footer a {
+footer.page-footer a {
   text-decoration: inherit;
   color: inherit;
   transition: all 0.5s ease;
   cursor: pointer;
 }
-footer a:hover {
+footer.page-footer a:hover {
   opacity: 0.5;
 }
-footer .nav-items {
+footer.page-footer .nav-items {
   grid-row: 1/3;
   grid-column: 1/2;
   font-size: 8vw;
 }
-footer .nav-items div {
+footer.page-footer .nav-items div {
   margin-top: 2vw;
 }
-footer .social-media-symbols {
+footer.page-footer .social-media-symbols {
   justify-self: end;
   display: flex;
   flex-direction: column;
@@ -832,17 +919,17 @@ footer .social-media-symbols {
   grid-column: 2/3;
   margin-bottom: 2vw;
 }
-footer .social-media-symbols a {
+footer.page-footer .social-media-symbols a {
   text-align: right;
 }
-footer .social-media-symbols a img {
+footer.page-footer .social-media-symbols a img {
   width: 20%;
   transition: all 0.5s ease;
 }
-footer .social-media-symbols a img:hover {
+footer.page-footer .social-media-symbols a img:hover {
   opacity: 0.5;
 }
-footer .email {
+footer.page-footer .email {
   font-size: 6vw;
   font-weight: 300;
   align-self: end;
