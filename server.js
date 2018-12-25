@@ -1,7 +1,10 @@
 const express = require('express')
 const next = require('next')
 const nodeMailer = require("nodemailer");
-const login = require("./secrets/email_auth");
+const login = process.env.NODEMAILER_EMAIL ? {
+    email: process.env.NODEMAILER_EMAIL,
+    password: process.env.NODEMAILER_PASSWORD
+} : require("./secrets/email_auth");
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -23,8 +26,8 @@ app.prepare()
         var transporter = nodeMailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.NODEMAILER_EMAIL || login.email,
-                pass: process.env.NODEMAILER_PASSWORD || login.password
+                user: login.email,
+                pass: login.password
             }
         });
 
