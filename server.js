@@ -7,6 +7,7 @@ let login = "";
 if (process.env.NODE_ENV === "production") {
     console.log("INIT LOGIN WITH PRODUCTION")
     console.log(process.env.NODEMAILER_EMAIL);
+    console.log(process.env.NODEMAILER_PASSWORD);
     login = {
         email: process.env.NODEMAILER_EMAIL,
         password: process.env.NODEMAILER_PASSWORD
