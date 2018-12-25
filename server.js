@@ -2,10 +2,19 @@ const express = require('express')
 const next = require('next')
 const nodeMailer = require("nodemailer");
 console.log("CURRENT ENVIRONMENT: " + process.env.NODE_ENV)
-const login = process.env.NODE_ENV === "production" ? {
-    email: process.env.NODEMAILER_EMAIL,
-    password: process.env.NODEMAILER_PASSWORD
-} : require("./secrets/email_auth");
+const login = "";
+
+if (process.env.NODE_ENV === "production") {
+    console.log("INIT LOGIN WITH PRODUCTION")
+    login = {
+        email: process.env.NODEMAILER_EMAIL,
+        password: process.env.NODEMAILER_PASSWORD
+    }
+}
+else {
+    console.log("INIT LOGIN WITH DEVELOPMENT")
+    login = require("./secrets/email_auth");
+} 
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
