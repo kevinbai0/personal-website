@@ -19,7 +19,7 @@ class ContactSection extends React.Component {
     }
     render = () =>
         <div className="contact-section">
-            <img className="background-img" src="/static/main-site/assets/giant3.png"/>
+            <img className="background-img" src="/static/main-site/assets/giant4.png"/>
             <div className="underlined-title">
                 <div className="title">Get in touch</div>
                 <div className="underlined width-20"></div>
