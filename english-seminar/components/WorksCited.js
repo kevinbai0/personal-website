@@ -1,8 +1,10 @@
 import React from "react";
+import seminarStyle from "../style";
 
 const WorksCited = ({navigationBar}) => 
     <div className="works-cited-page">
         {navigationBar}
+        {seminarStyle}
         <div className="title">Works Cited</div>
         <div className="cite-container">
             <div className="citation">
