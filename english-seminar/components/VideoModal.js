@@ -65,7 +65,7 @@ class VideoModal extends React.Component {
                     position: "absolute", top: "0", left: 0
                 }
             }>
-                <source src="/song.m4v" type="video/mp4"/>
+                <source src="/static/english-seminar/song.m4v" type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
             }
