@@ -1,7 +1,7 @@
 import React from 'react'
 import NextHead from 'next/head'
 import { string } from 'prop-types'
-import mainStylesheet from "./stylesheets/mainStyle.js";
+import mainStylesheet from "../stylesheets/mainStyle.js";
 
 const defaultDescription = ''
 const defaultOGURL = ''

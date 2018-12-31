@@ -1,0 +1,37 @@
+.camera-shot-div {
+    position: absolute;
+    z-index: 100;
+    left: 3vw;
+    right: 3vw;
+    top: 3vw;
+    bottom: 3vw;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    div {
+        width: 4vw;
+        height: 4vw;
+    }
+    $borderWidth: 5px;
+    .top-left {
+        border-top: $borderWidth solid;
+        border-left: $borderWidth solid;
+    }
+    .top-right {
+        border-top: $borderWidth solid;
+        border-right: $borderWidth solid;
+        justify-self: end;
+    }
+    .bottom-left {
+        border-bottom: $borderWidth solid;
+        border-left: $borderWidth solid;
+        align-self: end;
+    }
+    .bottom-right {
+        border-bottom: $borderWidth solid;
+        border-right: $borderWidth solid;
+        justify-self: end;
+        align-self: end;
+    }
+}
