@@ -37,6 +37,7 @@
     "rc-slider": "^8.6.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-transition-group": "^2.5.2",
     "unsplash-js": "^4.8.0"
   },
   "devDependencies": {
