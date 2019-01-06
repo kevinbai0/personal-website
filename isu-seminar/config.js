@@ -1,3 +1,3 @@
-let prefix = "/english-independant-study"; // if root, then keep prefix empty.
+let prefix = "/english-independent-study"; // if root, then keep prefix empty.
 
 export { prefix };
