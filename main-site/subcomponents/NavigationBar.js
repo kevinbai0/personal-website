@@ -11,10 +11,12 @@ class NavigationBar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			width: 0
+			isMobile: true
 		}
+		this.prevWidth = 0;
 	}
 	componentDidMount() {
+		this.prevWidth = window.innerWidth;
 		window.addEventListener("resize", this.resizeListener);
 		this.resizeListener();
 	}
@@ -24,12 +26,14 @@ class NavigationBar extends Component {
 
 	resizeListener = () => {
 		console.log(window.innerWidth);
-		this.setState({
-			width: window.innerWidth
-		})
+		if (this.prevWidth === window.innerWidth) return;
+		
+		if (this.prevWidth >= 800 && window.innerWidth < 800) this.setState({isMobile: true});
+		else if (this.prevWidth < 800 && window.innerWidth >= 800) this.setState({isMobile: false});
+		this.prevWidth = window.innerWidth;
 	}
 	render() {
-		if (this.state.width < 800) {
+		if (this.state.isMobile) {
 			return <HamburgerNavigation navItems={this.props.navItems} colorState={this.props.lightBar ? "light" : "dark"} />
 		}
 

@@ -32,16 +32,27 @@ class LandingPage extends Component {
 		super(props);
 		this.state = {
 			featuredWork: [
-				{title: "Molar Mass Calculator", src:"/static/main-site/assets/portfolio/molarmass.png", style: {
-					background: "#aaffa9",
-					background: "-webkit-linear-gradient(to right, #aaffa9, #11ffbd)",
-					background: "linear-gradient(to right, #aaffa9, #11ffbd)"
-				}, description: "A molar mass calculator published on the app store with a clean UI and functional UX."},
-				{title: "Falcotronix Website", src:"/static/main-site/assets/portfolio/falcotronix.png", style: {
-					background: "#7F7FD5",
-					background: "-webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)",
-					background: "linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)"
-				}, description: "Website for FIRST Robotics Team"},
+				{
+					title: "Molar Mass Calculator", 
+					src:"/static/main-site/assets/portfolio/molarmass.png",
+					type: "iPhoneX",
+					style: {
+						background: "#aaffa9",
+						background: "-webkit-linear-gradient(to right, #aaffa9, #11ffbd)",
+						background: "linear-gradient(to right, #aaffa9, #11ffbd)"
+					},
+					description: "A molar mass calculator published on the app store with a clean UI and functional UX."
+				},
+				{
+					title: "Falcotronix Website", 
+					src:"/static/main-site/assets/portfolio/falcotronix.png", 
+					type: "macbook",
+					style: {
+						background: "#7F7FD5",
+						background: "-webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)",
+						background: "linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)"
+					}, description: "Website for FIRST Robotics Team"
+				},
 			],
 			fullstackItems: [
 				{order: 1, title: "UX Design", content: "User experience and solving your customer need."},
@@ -102,7 +113,7 @@ class LandingPage extends Component {
 					<div className="featured-work-container">
 						{this.state.featuredWork.map((workItem, i) => {
 							return <AnimateScrollDiv key={i} id={"featuredWorkComponent" + i} animation={i % 2 == 0 ? "zoomInLeft" : "zoomInRight"} scrollPercentage={0.25}>
-								<FeaturedWorkComponent title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description}/>
+								<FeaturedWorkComponent title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description} type={workItem.type} />
 							</AnimateScrollDiv> 
 						})}
 					</div>

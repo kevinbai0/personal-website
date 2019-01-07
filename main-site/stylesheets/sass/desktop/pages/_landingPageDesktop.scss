@@ -132,37 +132,6 @@ $titleFontSize: 4vw;
 		}
 	}
 
-	.featured-work-item {
-		width: auto;
-		.featured-image-container {
-			border-radius: 3px;
-			height: 30vw;
-			width: 40vw;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			img{
-				height: 15vw;
-			}
-		}
-		.info {
-			align-self: center;
-			text-align: center;
-			.title {
-				margin: 2vw 0 0;
-				font-family: $mainFont;
-				font-weight: 500;
-				font-size: 3vw;
-			}
-			.description {
-				font-family: $mainFont;
-				font-weight: 300;
-				font-size: 2vw;
-				margin: 0 0 2vw;
-			}
-		}
-	}
-
 	.fullstack-items-container {
 		display: grid;
 		grid-template-rows: 1fr 1fr;

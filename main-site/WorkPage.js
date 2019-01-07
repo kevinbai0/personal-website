@@ -14,21 +14,36 @@ class WorkPage extends Component {
 		super(props);
 		this.state = {
 			scrollOffset: 0,
+			windowWidth: 1280,
 			featuredWork: [
-				{title: "Molar Mass Calculator", src:"/static/main-site/assets/portfolio/molarmass.png", style: {
-					background: "#aaffa9",
-					background: "-webkit-linear-gradient(to right, #aaffa9, #11ffbd)",
-					background: "linear-gradient(to right, #aaffa9, #11ffbd)"
-				}, description: "A molar mass calculator published on the app store with a clean UI and functional UX."},
-				{title: "Falcotronix Website", src:"/static/main-site/assets/portfolio/falcotronix.png", style: {
-					background: "#7F7FD5",
-					background: "-webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)",
-					background: "linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)"
-				}, description: "Website for FIRST Robotics Team"},
-			]
+				{
+					title: "Molar Mass Calculator", 
+					src:"/static/main-site/assets/portfolio/molarmass.png",
+					type: "iPhoneX",
+					style: {
+						background: "#aaffa9",
+						background: "-webkit-linear-gradient(to right, #aaffa9, #11ffbd)",
+						background: "linear-gradient(to right, #aaffa9, #11ffbd)"
+					},
+					description: "A molar mass calculator published on the app store with a clean UI and functional UX."
+				},
+				{
+					title: "Falcotronix Website", 
+					src:"/static/main-site/assets/portfolio/falcotronix.png", 
+					type: "macbook",
+					style: {
+						background: "#7F7FD5",
+						background: "-webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)",
+						background: "linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5)"
+					}, description: "Website for FIRST Robotics Team"
+				},
+			],
 		}
 	}
 	componentDidMount() {
+		this.setState({
+			windowWidth: window.innerWidth
+		})
 		window && window.scrollTo(0, 0);
 		window && window.addEventListener("scroll", this.scrollListener);
 	}
@@ -54,12 +69,12 @@ class WorkPage extends Component {
 				{
 					this.state.featuredWork.map((workItem, i) => {
 						let scrollPercentage = 0.25;
-						/*if (window && window.innerWidth < 800) {
+						if (this.state.windowWidth < 800) {
 							if (i == 0) scrollPercentage = -1;
 						}
-						else {*/
+						else {
 							if (i == 0 || i == 1) scrollPercentage = -1;
-						//}
+						}
 						return (
 							<AnimateScrollDiv 
 								key={i} 
@@ -68,7 +83,7 @@ class WorkPage extends Component {
 								animation={i % 2 == 0 ? "zoomInLeft" : "zoomInRight"} 
 								scrollPercentage={scrollPercentage}
 							>
-								<FeaturedWorkComponent title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description}/>
+								<FeaturedWorkComponent title={workItem.title} src={workItem.src} style={workItem.style} description={workItem.description} type={workItem.type}/>
 							</AnimateScrollDiv>
 						)
 					})

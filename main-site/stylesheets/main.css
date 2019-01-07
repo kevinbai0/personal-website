@@ -232,38 +232,6 @@
   margin-top: 10vw;
 }
 
-.featured-work-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-.featured-work-item .featured-image-container {
-  border-radius: 1vw;
-  height: 90vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.featured-work-item .featured-image-container img {
-  height: 40vw;
-}
-.featured-work-item .info {
-  align-self: center;
-  text-align: center;
-}
-.featured-work-item .info .title {
-  margin: 4vw 0 0;
-  font-family: "Tajawal";
-  font-weight: 500;
-  font-size: 8vw;
-}
-.featured-work-item .info .description {
-  font-family: "Tajawal";
-  font-weight: 300;
-  font-size: 5vw;
-  margin: 0 0 6vw;
-}
-
 .fullstack-items-container .fullstack-item {
   display: grid;
   grid-template-rows: 1fr;
@@ -709,37 +677,6 @@
   }
   .landing-page .contact-landing-section .my-location {
     margin-top: 3vw;
-  }
-
-  .featured-work-item {
-    width: auto;
-  }
-  .featured-work-item .featured-image-container {
-    border-radius: 3px;
-    height: 30vw;
-    width: 40vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .featured-work-item .featured-image-container img {
-    height: 15vw;
-  }
-  .featured-work-item .info {
-    align-self: center;
-    text-align: center;
-  }
-  .featured-work-item .info .title {
-    margin: 2vw 0 0;
-    font-family: "Tajawal";
-    font-weight: 500;
-    font-size: 3vw;
-  }
-  .featured-work-item .info .description {
-    font-family: "Tajawal";
-    font-weight: 300;
-    font-size: 2vw;
-    margin: 0 0 2vw;
   }
 
   .fullstack-items-container {
@@ -1454,6 +1391,82 @@ nav .nav-item.dark {
   outline: none;
 }
 
+.featured-work-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.featured-work-item .featured-image-container {
+  border-radius: 1vw;
+  height: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featured-work-item .featured-image-container .featured-image {
+  height: 40vw;
+}
+.featured-work-item .featured-image-container .featured-image.iPhoneX {
+  height: 50vw;
+}
+.featured-work-item .featured-image-container .featured-image.macbook {
+  height: 40vw;
+}
+.featured-work-item .info {
+  align-self: center;
+  text-align: center;
+}
+.featured-work-item .info .title {
+  margin: 4vw 0 0;
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 8vw;
+}
+.featured-work-item .info .description {
+  font-family: "Tajawal";
+  font-weight: 300;
+  font-size: 5vw;
+  margin: 0 0 6vw;
+}
+
+@media only screen and (min-width: 800px) {
+  .featured-work-item {
+    width: auto;
+  }
+  .featured-work-item .featured-image-container {
+    border-radius: 3px;
+    height: 30vw;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-work-item .featured-image-container .featured-image {
+    height: 40vw;
+  }
+  .featured-work-item .featured-image-container .featured-image.iPhoneX {
+    height: 20vw;
+  }
+  .featured-work-item .featured-image-container .featured-image.macbook {
+    height: 15vw;
+  }
+  .featured-work-item .info {
+    align-self: center;
+    text-align: center;
+  }
+  .featured-work-item .info .title {
+    margin: 2vw 0 0;
+    font-family: "Tajawal";
+    font-weight: 500;
+    font-size: 3vw;
+  }
+  .featured-work-item .info .description {
+    font-family: "Tajawal";
+    font-weight: 300;
+    font-size: 2vw;
+    margin: 0 0 2vw;
+  }
+}
 body {
   padding: 0;
   margin: 0;
