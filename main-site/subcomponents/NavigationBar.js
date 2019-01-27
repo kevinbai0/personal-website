@@ -19,6 +19,7 @@ class NavigationBar extends Component {
 		this.prevWidth = window.innerWidth;
 		window.addEventListener("resize", this.resizeListener);
 		this.resizeListener();
+		if (window.innerWidth >= 800) this.setState({isMobile: false});
 	}
 	componentWillUnmount() {
 		window.removeEventListener("resize", this.resizeListener);
