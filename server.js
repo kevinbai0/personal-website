@@ -22,6 +22,12 @@ app.prepare()
     const server = express()
     server.use(express.json());
 
+    server.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "https://www.bamboostudios.ca");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    });
+
     server.get('*', (req, res) => {
         return handle(req, res)
     })
@@ -30,6 +36,9 @@ app.prepare()
         app.render(req, res, "/");
     })
     server.post("/api/email", (req,res) => {
+        if (!req.body.name || !req.body.email || !req.body.subject || !req.body.message) {
+            return res.status(400).send("Bad request!").end();
+        }
         const sgMail = require('@sendgrid/mail');
         sgMail.setApiKey(login.apiKey);
         const msg = {
