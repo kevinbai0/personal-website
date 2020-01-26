@@ -28,8 +28,9 @@ const backgroundAnim: DrawableFunction = () => {
         [1.6, 1.79],
         [1.85, 2.0],
     ])
+    console.log(seed)
 
-    const points = [...Array(1000)].map(() => {
+    const points = [...Array(250)].map(() => {
         const values = myFunc(globalX, globalY, seed)
         globalX = values.x
         globalY = values.y
@@ -44,7 +45,7 @@ const backgroundAnim: DrawableFunction = () => {
         })
         const line = utils.GenLine(points, {
             stroke:
-                count < 120
+                count < 480
                     ? utils.rgba(0, 0, 0, 0.01)
                     : utils.rgba(0, 0, 0, 0.001),
             lineWidth: 1,

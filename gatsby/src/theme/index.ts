@@ -33,7 +33,7 @@ interface FontSize {
     titleSmall?: number
 }
 
-const fontSizes: FontSize = [18, 24, 36, 64, 84]
+const fontSizes: FontSize = [18, 24, 36, 54, 84]
 fontSizes.body = fontSizes[0]
 fontSizes.caption = fontSizes[1]
 fontSizes.nav = fontSizes[1]
