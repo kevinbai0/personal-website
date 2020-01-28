@@ -10,14 +10,14 @@ const brown = "#462E08"
 interface Breakpoints {
     [key: number]: number
     mobile_576?: string
-    tablet_768?: string
+    tablet800?: string
     desktop_992?: string
     desktop_1200?: string
 }
 
-const breakpoints: Breakpoints = [576, 768, 992, 1200]
+const breakpoints: Breakpoints = [576, 800, 992, 1200]
 breakpoints.mobile_576 = `@media only screen and (min-width: ${breakpoints[0]}px)`
-breakpoints.tablet_768 = `@media only screen and (min-width: ${breakpoints[1]}px)`
+breakpoints.tablet800 = `@media only screen and (min-width: ${breakpoints[1]}px)`
 breakpoints.desktop_992 = `@media only screen and (min-width: ${breakpoints[2]}px)`
 breakpoints.desktop_1200 = `@media only screen and (min-width: ${breakpoints[3]}px)`
 

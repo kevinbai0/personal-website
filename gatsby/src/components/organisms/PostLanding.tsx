@@ -32,6 +32,8 @@ export default () => {
                 by playing intramural soccer and volleyball, singing at ACE
                 Acapella, and chilling with friends.
             </AboutMeBody>
+
+            <Section2Title>What I&apos;m Currently Working On</Section2Title>
         </Container>
     )
 }
@@ -39,7 +41,7 @@ export default () => {
 const Container = styled.div`
     padding: 50px ${props => props.theme.space.sidePaddingMobile} 0;
 
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         display: grid;
         padding: 50px ${props => props.theme.space.sidePadding} 0;
         grid-template-columns: 1fr 1fr 1fr;
@@ -48,14 +50,14 @@ const Container = styled.div`
 `
 
 const SectionTitle = styled(H2)`
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         text-align: right;
     }
 `
 
 const AboutMeBody = styled(Body)`
-    margin: 30px 0 0;
-    ${props => props.theme.breakpoints.tablet_768} {
+    margin: 30px 0 50px;
+    ${props => props.theme.breakpoints.tablet800} {
         margin: 80px 0 0;
     }
     grid-column: 2/4;
@@ -71,9 +73,15 @@ const ImageMe = styled(PersonalImage)`
     border-radius: 3px;
     margin: 20px -${props => props.theme.space.sidePaddingMobile} 0;
 
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         margin: 0;
         width: 275px;
         height: 275px;
+    }
+`
+
+const Section2Title = styled(H2)`
+    ${props => props.theme.breakpoints.tablet800} {
+        grid-column: 3/4;
     }
 `

@@ -35,7 +35,7 @@ export default styled.button<StyledAnimatedProps & Variant>`
     box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
     outline: none;
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         font-size: ${props => props.theme.fontSizes.caption}px;
     }
 

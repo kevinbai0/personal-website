@@ -7,7 +7,9 @@ export default styled.h2<StyledAnimatedProps>`
     color: ${props => props.theme.colors.neutral};
     margin: 0;
 
-    ${props => props.theme.breakpoints.tablet_768} {
+    line-height: 1.25;
+
+    ${props => props.theme.breakpoints.tablet800} {
         font-size: ${props => props.theme.fontSizes.header}px;
     }
 

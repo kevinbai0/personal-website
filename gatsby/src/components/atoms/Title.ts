@@ -7,7 +7,7 @@ const Title = styled.h1<StyledAnimatedProps>`
     color: ${props => props.theme.colors.light};
     margin: 0;
 
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         font-size: ${props => props.theme.fontSizes.title}px;
     }
 

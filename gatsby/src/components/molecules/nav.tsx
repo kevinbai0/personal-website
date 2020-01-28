@@ -31,11 +31,13 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         display: grid;
         grid-template-rows: 1fr;
         grid-auto-flow: column;
+        grid-auto-columns: min-content;
         grid-gap: 4vw;
+        justify-content: inherit;
         padding: 5vw ${props => props.theme.space.sidePadding} 0;
     }
 `
@@ -62,7 +64,7 @@ const NavTitle = styled.span<{ color: string; noTransition?: boolean }>`
     font-weight: ${props => props.theme.fontWeights.bold};
     cursor: pointer;
 
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         font-size: ${props => props.theme.fontSizes.nav}px;
     }
 

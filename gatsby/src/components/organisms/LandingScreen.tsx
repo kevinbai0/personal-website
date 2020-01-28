@@ -61,7 +61,7 @@ const ContentLayer = styled.div`
     right: 0;
     background-color: rgba(67, 31, 6, 0.32);
     padding: 40vh ${props => props.theme.space.sidePaddingMobile} 0;
-    ${props => props.theme.breakpoints.tablet_768} {
+    ${props => props.theme.breakpoints.tablet800} {
         padding: 40vh ${props => props.theme.space.sidePadding} 0;
     }
 `
