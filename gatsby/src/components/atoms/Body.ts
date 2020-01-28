@@ -2,15 +2,11 @@ import styled from "styled-components"
 import { StyledAnimatedProps } from "../../lib/Animated"
 
 export default styled.p<StyledAnimatedProps>`
-    font-size: ${props => props.theme.fontSizes.caption}px;
+    font-size: ${props => props.theme.fontSizes.body}px;
     line-height: 1.5;
     font-weight: ${props => props.theme.fontWeights.regular};
-    color: ${props => props.theme.colors.light};
+    color: ${props => props.theme.colors.dark};
     margin: 0;
-
-    ${props => props.theme.breakpoints.tablet_768} {
-        font-size: ${props => props.theme.fontSizes.caption}px;
-    }
 
     ${props => props.animationStyle};
     ${props =>

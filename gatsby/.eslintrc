@@ -35,6 +35,7 @@
         "camelcase": "off",
         "@typescript-eslint/camelcase": ["error", { "properties": "never" }],
         "react/prop-types": 0,
+        "react/display-name": 0,
         "linebreak-style": [
             "error",
             "unix"

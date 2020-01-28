@@ -1,13 +1,34 @@
 import styled from "styled-components"
 import { StyledAnimatedProps } from "../../lib/Animated"
 
-export default styled.button<StyledAnimatedProps>`
+interface Variant {
+    variant?: "primary" | "secondary"
+}
+
+export default styled.button<StyledAnimatedProps & Variant>`
     font-size: ${props => props.theme.fontSizes.caption}px;
     line-height: 1.2;
     font-weight: ${props => props.theme.fontWeights.regular};
-    color: ${props => props.theme.colors.light};
-    background-color: ${props => props.theme.colors.action};
-    padding: 5px 28px;
+    ${props => {
+        if (props.variant === "secondary") {
+            return `
+                color: ${props.theme.colors.dark};
+                background-color: ${props.theme.colors.light};
+                &:hover {
+                    background-color: #F4EBDE;
+                }
+            `
+        }
+        return `
+            color: ${props.theme.colors.light};
+            background-color: ${props.theme.colors.action};
+            &:hover {
+                background-color: #e8a131;
+            }
+        `
+    }}
+
+    padding: 10px 38px;
     margin: 0;
     border: none;
     border-radius: 3px;

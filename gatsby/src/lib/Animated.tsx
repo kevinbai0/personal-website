@@ -18,12 +18,15 @@ export function useAnimated(initialState: string, styles: StyledStates) {
         style: styles[initialState],
     })
 
-    function updateState(state: string, delay?: number): void | Promise<void> {
+    function updateState(state: string, delay?: number): Promise<void> {
         function update() {
             setAnimationState({ state, style: styles[state] })
         }
         if (!delay) {
-            return update()
+            return new Promise(res => {
+                update()
+                res()
+            })
         }
 
         return new Promise(res =>

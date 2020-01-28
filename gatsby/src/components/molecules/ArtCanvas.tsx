@@ -5,10 +5,10 @@ import { DrawableFunction, Draw } from "artgenjs/dist/types/types"
 
 const Container = styled.div`
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vmax;
-    height: 100vmax;
+    left: -2vmax;
+    top: -2vmax;
+    width: 104vmax;
+    height: 104vmax;
 `
 
 const backgroundAnim: DrawableFunction = () => {
@@ -62,6 +62,18 @@ const backgroundAnim: DrawableFunction = () => {
 
 const ArtCanvas: React.FC<{ className?: string }> = ({ className }) => {
     const artgenRef = useRef<HTMLDivElement>()
+    useEffect(() => {
+        function skew(e: MouseEvent) {
+            const x = e.clientX,
+                y = e.clientY
+            artgenRef.current.style.transform = `skew(${(x /
+                window.innerWidth) *
+                2 -
+                1}deg, ${(y / window.innerHeight) * 2 - 1}deg)`
+        }
+        window.addEventListener("mousemove", skew)
+        return () => window.removeEventListener("mousemove", skew)
+    })
     useEffect(() => {
         const drawEngine = new DrawEngine(backgroundAnim, artgenRef.current)
         drawEngine.start()

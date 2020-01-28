@@ -33,14 +33,14 @@ interface FontSize {
     titleSmall?: number
 }
 
-const fontSizes: FontSize = [18, 24, 36, 54, 84]
+const fontSizes: FontSize = [18, 24, 36, 54, 64, 84]
 fontSizes.body = fontSizes[0]
 fontSizes.caption = fontSizes[1]
 fontSizes.nav = fontSizes[1]
 fontSizes.navSmall = fontSizes[0]
-fontSizes.header = fontSizes[2]
-fontSizes.headerSmall = fontSizes[1]
-fontSizes.title = fontSizes[4]
+fontSizes.header = fontSizes[4]
+fontSizes.headerSmall = fontSizes[2]
+fontSizes.title = fontSizes[5]
 fontSizes.titleSmall = fontSizes[3]
 
 type Weight =
@@ -79,6 +79,10 @@ const theme = {
         action: orange,
         actionLight: orangeTint,
         footer: lightShade,
+    },
+    space: {
+        sidePadding: "10vw",
+        sidePaddingMobile: "15px",
     },
     breakpoints,
     fontSizes,
