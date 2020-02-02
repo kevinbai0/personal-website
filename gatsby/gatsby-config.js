@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     siteMetadata: {
         title: "Personal Website",
@@ -7,6 +8,13 @@ module.exports = {
     plugins: [
         "gatsby-plugin-typescript",
         "gatsby-plugin-react-helmet",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "content",
+                path: "./src/content",
+            },
+        },
         {
             resolve: "gatsby-source-filesystem",
             options: {
@@ -32,6 +40,7 @@ module.exports = {
                 icon: "src/images/favicon.png", // This path is relative to the root of the site.
             },
         },
+        "gatsby-plugin-mdx",
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

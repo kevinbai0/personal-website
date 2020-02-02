@@ -1,0 +1,25 @@
+---
+name: ArtGen
+path: /projects/ArtGen
+github: https://www.github.com/kevinbai0/ArtGen
+languages: Javascript, Typescript
+devTools: ESLint, Prettier, Babel, Webpack, Jest, TravisCI
+type: Development
+mainImage: ../images/artgen.png
+---
+import DynamicText from "../components/molecules/DynamicText.tsx"
+
+# ArtGen
+<DynamicText 
+    fetchUrl="https://api.github.com/users/kevinbai0/repos" 
+    handleResponse={(res, set) => {
+        res.json().then(json => {
+            const artgenKey = Object.keys(json).find(
+                key => json[key].name === "ArtGen"
+            )
+            set(json[artgenKey].description)
+        })
+    }}
+/>
+
+

@@ -68,8 +68,8 @@ const ArtCanvas: React.FC<{ className?: string }> = ({ className }) => {
                 y = e.clientY
             artgenRef.current.style.transform = `skew(${(x /
                 window.innerWidth) *
-                2 -
-                1}deg, ${(y / window.innerHeight) * 2 - 1}deg)`
+                4 -
+                2}deg, ${(y / window.innerHeight) * 4 - 2}deg)`
         }
         window.addEventListener("mousemove", skew)
         return () => window.removeEventListener("mousemove", skew)
