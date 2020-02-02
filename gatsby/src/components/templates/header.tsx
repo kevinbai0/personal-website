@@ -1,6 +1,5 @@
 import React from "react"
 import Helmet from "react-helmet"
-import Nav from "../molecules/nav"
 
 const Header: React.FC<{ siteTitle?: string }> = () => (
     <header>
@@ -83,7 +82,6 @@ const Header: React.FC<{ siteTitle?: string }> = () => (
             />
             <meta name="theme-color" content="#D18917"></meta>
         </Helmet>
-        <Nav />
     </header>
 )
 

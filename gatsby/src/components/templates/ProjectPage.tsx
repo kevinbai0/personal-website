@@ -3,23 +3,30 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
 import Layout from "./layout"
 import SEO from "./seo"
-import DynamicText from "../molecules/DynamicText"
-import Img from "gatsby-image"
+import ProjectHeader from "../molecules/ProjectHeader"
 import styled from "styled-components"
+import Title from "../atoms/Title"
 
 export default ({ data: { mdx } }) => {
     return (
         <Layout>
             <SEO title={mdx.frontmatter.name} />
-            <Image fluid={mdx.frontmatter.mainImage.childImageSharp.fluid} />
-            <MDXRenderer scope={{ React, DynamicText }}>{mdx.body}</MDXRenderer>
+            <Container>
+                <MDXRenderer
+                    scope={{ React, ProjectHeader }}
+                    mainImage={mdx.frontmatter.mainImage.childImageSharp.fluid}
+                    frontmatter={mdx.frontmatter}
+                    components={{
+                        h1: Title,
+                        h2: Title,
+                    }}
+                >
+                    {mdx.body}
+                </MDXRenderer>
+            </Container>
         </Layout>
     )
 }
-
-const Image = styled(Img)`
-    width: 400px;
-`
 
 export const pageQuery = graphql`
     query BlogPostQuery($id: String) {
@@ -28,6 +35,11 @@ export const pageQuery = graphql`
             body
             frontmatter {
                 name
+                repoName
+                languages
+                frameworks
+                devTools
+                type
                 mainImage {
                     childImageSharp {
                         fluid {
@@ -37,5 +49,13 @@ export const pageQuery = graphql`
                 }
             }
         }
+    }
+`
+
+const Container = styled.div`
+    padding: 100px ${props => props.theme.space.sidePaddingMobile};
+
+    ${props => props.theme.breakpoints.tablet800} {
+        padding: 200px ${props => props.theme.space.sidePadding};
     }
 `

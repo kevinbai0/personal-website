@@ -2,20 +2,29 @@ import React, { useContext } from "react"
 import Logo from "../atoms/Logo"
 import styled, { ThemeContext } from "styled-components"
 
-const Nav: React.FC<{}> = () => {
+const Nav: React.FC<{ light?: boolean }> = ({ light }) => {
     const { colors } = useContext(ThemeContext)
 
     return (
         <StyledNav>
             <Row>
-                <NavLogo color={colors.actionLight} />
-                <NavTitle noTransition color={colors.actionLight}>
+                <NavLogo color={light ? colors.actionLight : colors.action} />
+                <NavTitle
+                    noTransition
+                    color={light ? colors.actionLight : colors.action}
+                >
                     Home
                 </NavTitle>
             </Row>
-            <NavTitle color={colors.light}>About</NavTitle>
-            <NavTitle color={colors.light}>Contact</NavTitle>
-            <NavTitle color={colors.light}>Portfolio</NavTitle>
+            <NavTitle color={light ? colors.light : colors.dark}>
+                About
+            </NavTitle>
+            <NavTitle color={light ? colors.light : colors.dark}>
+                Contact
+            </NavTitle>
+            <NavTitle color={light ? colors.light : colors.dark}>
+                Portfolio
+            </NavTitle>
         </StyledNav>
     )
 }
