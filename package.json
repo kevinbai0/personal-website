@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/kevinbai0/personal-website#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "next": "^10.0.7",
     "rc-slider": "^8.6.3",
     "react": "^17.0.1",
