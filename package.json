@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "next start",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
@@ -16,29 +16,17 @@
   },
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "10.x"
-  },
   "bugs": {
     "url": "https://github.com/kevinbai0/personal-website/issues"
   },
   "homepage": "https://github.com/kevinbai0/personal-website#readme",
   "dependencies": {
-    "@sendgrid/mail": "^6.3.1",
-    "@zeit/next-css": "^1.0.1",
-    "animate.css": "^3.7.0",
-    "animejs": "^2.2.0",
-    "event-stream": "^4.0.1",
-    "express": "^4.16.4",
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "^7.0.2",
-    "node-fetch": "^2.2.1",
-    "nodemailer": "^4.6.8",
+    "next": "^10.0.7",
     "rc-slider": "^8.6.3",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-transition-group": "^2.5.2",
-    "unsplash-js": "^4.8.0"
+    "unsplash-js": "^7.0.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
