@@ -1,28 +1,62 @@
 import React, { useContext } from "react"
 import Logo from "../atoms/Logo"
 import styled, { ThemeContext } from "styled-components"
+import { navigate } from "@reach/router"
 
-const Nav: React.FC<{ light?: boolean }> = ({ light }) => {
+const Nav: React.FC<{
+    light?: boolean
+    selected: "Home" | "About" | "Contact" | "Portfolio"
+}> = ({ light, selected }) => {
     const { colors } = useContext(ThemeContext)
+
+    const selectedColor = light ? colors.actionLight : colors.action
+    const notSelectedColor = light ? colors.light : colors.dark
+
+    function updatePage(page: typeof selected) {
+        if (page === "Portfolio") {
+            navigate("/portfolio")
+            return
+        }
+        navigate("/")
+    }
 
     return (
         <StyledNav>
-            <Row>
-                <NavLogo color={light ? colors.actionLight : colors.action} />
+            <Row onClick={() => updatePage("Home")}>
+                <NavLogo
+                    color={
+                        selected === "Home" ? selectedColor : notSelectedColor
+                    }
+                />
                 <NavTitle
                     noTransition
-                    color={light ? colors.actionLight : colors.action}
+                    color={
+                        selected === "Home" ? selectedColor : notSelectedColor
+                    }
                 >
                     Home
                 </NavTitle>
             </Row>
-            <NavTitle color={light ? colors.light : colors.dark}>
+            <NavTitle
+                onClick={() => updatePage("Home")}
+                color={selected === "About" ? selectedColor : notSelectedColor}
+            >
                 About
             </NavTitle>
-            <NavTitle color={light ? colors.light : colors.dark}>
+            <NavTitle
+                onClick={() => updatePage("Home")}
+                color={
+                    selected === "Contact" ? selectedColor : notSelectedColor
+                }
+            >
                 Contact
             </NavTitle>
-            <NavTitle color={light ? colors.light : colors.dark}>
+            <NavTitle
+                onClick={() => updatePage("Home")}
+                color={
+                    selected === "Portfolio" ? selectedColor : notSelectedColor
+                }
+            >
                 Portfolio
             </NavTitle>
         </StyledNav>

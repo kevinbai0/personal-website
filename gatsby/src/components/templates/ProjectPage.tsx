@@ -9,7 +9,7 @@ import Title from "../atoms/Title"
 
 export default ({ data: { mdx } }) => {
     return (
-        <Layout>
+        <Layout selected="Portfolio">
             <SEO title={mdx.frontmatter.name} />
             <Container>
                 <MDXRenderer
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
             body
             frontmatter {
                 name
+                github
                 repoName
                 languages
                 frameworks

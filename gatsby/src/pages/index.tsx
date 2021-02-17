@@ -6,7 +6,7 @@ import PostLanding from "../components/organisms/PostLanding"
 
 const IndexPage = () => {
     return (
-        <Layout lightNav={true}>
+        <Layout lightNav={true} selected="Home">
             <SEO title="Home" />
             <LandingScreen />
             <PostLanding />

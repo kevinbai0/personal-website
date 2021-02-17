@@ -2183,10 +2183,10 @@ arrify@^2.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
 
-artgenjs@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/artgenjs/-/artgenjs-1.0.9.tgz#cb0d735a6814925bc1d8ec1934bcaaa87cd8cb39"
-  integrity sha512-xcLf+AMCKYxnoxAT38JT68985LQlcrk+92iJFdv8x94jGiigezDwr99O98hGhfDLyleAGdErgIrF0q+A56VX+g==
+artgenjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/artgenjs/-/artgenjs-1.1.0.tgz#ceaa7b536b284e0e35c76b640c303eee5ec2ad4b"
+  integrity sha512-H/D3YFqfvnP+X0Z4o1bZ7rrqj1BQJqY3lPyUNMKIoAqrpk/mbWWxCFQ4msLYGx254QsOR4ci3QaMoJrc500M9A==
 
 asap@~2.0.3:
   version "2.0.6"

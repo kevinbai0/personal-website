@@ -9,8 +9,9 @@ import Nav from "../molecules/nav"
 interface Props {
     children: any
     lightNav?: boolean
+    selected: "Home" | "About" | "Contact" | "Portfolio"
 }
-const Layout: React.FC<Props> = ({ children, lightNav }) => {
+const Layout: React.FC<Props> = ({ children, lightNav, selected }) => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -25,7 +26,7 @@ const Layout: React.FC<Props> = ({ children, lightNav }) => {
         <ThemeProvider theme={theme}>
             <Header siteTitle={data.site.siteMetadata.title} />
             <div style={{ backgroundColor: theme.colors.light }}>
-                <Nav light={lightNav} />
+                <Nav light={lightNav} selected={selected} />
                 <main>{children}</main>
                 <footer></footer>
             </div>

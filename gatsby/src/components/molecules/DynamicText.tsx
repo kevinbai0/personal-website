@@ -1,16 +1,17 @@
 import React, { useState } from "react"
+import Caption from "../atoms/Caption"
+import repos from "../../lib/repos"
 
 interface Props {
     className?: string
-    fetchUrl: string
     handleResponse: (
-        res: Response,
+        res: any,
         set: React.Dispatch<React.SetStateAction<string>>
     ) => void
 }
 
-export default ({ className, fetchUrl, handleResponse }: Props) => {
+export default ({ className, handleResponse }: Props) => {
     const [textState, setTextState] = useState("")
-    fetch(fetchUrl).then(res => handleResponse(res, setTextState))
-    return <div className={className}>{textState}</div>
+    repos.then(json => handleResponse(json, setTextState))
+    return <Caption className={className}>{textState}</Caption>
 }

@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
-import { DrawEngine, utils } from "artgenjs"
-import { DrawableFunction, Draw } from "artgenjs/dist/types/types"
+import { DrawEngine, utils, Animated } from "artgenjs"
+import { DrawableFunction, Draw, Point } from "artgenjs/dist/types/types"
+
+const { rgba, unwrap, GenPoint, GenLine } = utils
 
 const Container = styled.div`
     position: absolute;
@@ -36,6 +38,7 @@ const backgroundAnim: DrawableFunction = () => {
         globalY = values.y
         return utils.GenPoint(values.x, values.y)
     })
+    let lines: Animated.AnimatedLine[] = []
     const draw: Draw = (n, count) => {
         points.forEach(point => {
             const values = myFunc(globalX, globalY, seed)
@@ -46,16 +49,56 @@ const backgroundAnim: DrawableFunction = () => {
         const line = utils.GenLine(points, {
             stroke:
                 count < 480
-                    ? utils.rgba(0, 0, 0, 0.01)
+                    ? utils.rgba(0, 0, 0, 0.005)
                     : utils.rgba(0, 0, 0, 0.001),
             lineWidth: 1,
         })
-        return [line]
+        lines.push(new Animated.AnimatedLine(line, 0))
+        lines = lines.filter(line => !line.ended)
+
+        const toDraw = lines.map(line => line.update(0.001))
+        return toDraw
     }
 
     return {
         draw,
         iterate: x => x + 1,
+        endIf: () => false,
+    }
+}
+
+const newAnim: DrawableFunction = () => {
+    const seed = unwrap([0, 3])
+    console.log(seed)
+    const points = utils
+        .generate(1, () => {
+            return {
+                x: utils.unwrap([-512, 512]),
+                y: utils.unwrap([-512, 512]),
+            }
+        })
+        .map((point, i) =>
+            GenPoint(point.x, point.y, {
+                fill: rgba(0, 0, 0, 1),
+                radius: 2,
+            })
+        )
+
+    const draw: Draw = (n, count) => {
+        points.forEach(point => {
+            const x = unwrap(point.x) / 512
+            const y = unwrap(point.y) / 512
+            point.mutate({
+                x: Math.sin(2 * x * seed) * 512,
+                y: Math.cos(x * x + y * Math.sqrt(seed)) * 512,
+            })
+        })
+        return points
+    }
+
+    return {
+        draw,
+        iterate: x => x,
         endIf: () => false,
     }
 }
@@ -75,7 +118,7 @@ const ArtCanvas: React.FC<{ className?: string }> = ({ className }) => {
         return () => window.removeEventListener("mousemove", skew)
     })
     useEffect(() => {
-        const drawEngine = new DrawEngine(backgroundAnim, artgenRef.current)
+        const drawEngine = new DrawEngine(newAnim, artgenRef.current)
         drawEngine.start()
     }, [])
     return <Container ref={artgenRef} className={className} />
