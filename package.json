@@ -22,19 +22,17 @@
   "homepage": "https://github.com/kevinbai0/personal-website#readme",
   "dependencies": {
     "@kbai/design-system": "^0.1.16",
-    "@tabtabapp/lint-rules": "^1.0.9",
-    "@types/node": "^14.14.28",
-    "@types/react": "^17.0.2",
     "animejs": "^3.2.1",
-    "eslint": "^7.20.0",
     "next": "^10.0.7",
     "rc-slider": "^8.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-transition-group": "^2.5.2",
-    "unsplash-js": "^7.0.4"
+    "react-transition-group": "^2.5.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "@tabtabapp/lint-rules": "^1.0.9",
+    "@types/node": "^14.14.28",
+    "@types/react": "^17.0.2",
+    "eslint": "^7.20.0"
   }
 }
